@@ -1,0 +1,5 @@
+# Atomic Num	Name		Symbol	Atomic mass
+1		Hydrogen	H	1.007825
+2		Helium		He	4.00260
+3		Lithium		Li	6.941
+4		Beryllium	Be	9.01218
