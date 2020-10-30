@@ -3,7 +3,8 @@
 ## Project Info
 Based on: "The Vue Tutorial for 2018" by DesignCourse                
 Video: https://www.youtube.com/watch?v=78tNYZUS-ps               
-Written: https://coursetro.com/courses/23/Vue-Tutorial-in-2018---Learn-Vue.js-by-Example
+Written: https://coursetro.com/courses/23/Vue-Tutorial-in-2018---Learn-Vue.js-by-Example          
+Editor: Visual Studio Code
 
 ## Create vue project
 ```
