@@ -2,7 +2,7 @@
 
 ## Project Info
 Based on: "Vue JS 2 Tutorial" by The Net Ninja                
-https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa                      
+Playlist: https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa                      
 Editor: Visual Studio Code
 
 ## Create vue project
