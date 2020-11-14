@@ -65,3 +65,42 @@ V-show  <— gives display: none in DOM
 <template v-for=“”></template>
 	vs. div/span
 v-for=“(val, key) in ninja” —> cycle through objects
+
+https://vuejs.org/v2/guide/events.html
+https://www.w3schools.com/jsref/dom_obj_event.asp
+
+
+<input type=“text” ref=“input”/>
+readRefs ==>
+	this.$refs.input.value	<input>
+	this.$refs.test.innerText	 <div>
+
+
+Reference types will be updated everywhere
+Primitive types are local changes
+
+components: child -> parent
+Props: parent -> child, v-bind
+Emit: child -> parent -> child
+Event bus: child -> child
+
+Life cycle hooks: https://vuejs.org/v2/guide/instance.html
+
+Pass html templates using slots
+	pass components from: parent -> child
+
+Keep-alive: keep changes in dynamic components when switched off
+
+V-model: bind input field to data and use later
+v-model.lazy: update only after tab or deselect
+
+Simple http requests: http://jsonplaceholder.typicode.com/
+
+Custom directives ie. V-rainbow, v-theme, similar to v-if, but personal defined
+
+firebase.google.com —> fast dev database
+
+https://ipsum-community.github.io/hodoripsum/
+http://www.cheeseipsum.co.uk/
+https://www.loremipsums.nl/lorem-ipsum-origineel/space-ipsum/
+
