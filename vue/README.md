@@ -1,3 +1,7 @@
+### Docs
+```Template.vue``` - Stock template for future ```.vue``` files         
+```scattered_notes.txt``` - Random notes taken while following The Net Ninja tutorials
+
 ### todo-list
 Tutorial: [The Vue Tutorial for 2018](https://www.youtube.com/watch?v=78tNYZUS-ps) by Design Course             
 Written Tutorial: https://coursetro.com/courses/23/Vue-Tutorial-in-2018---Learn-Vue.js-by-Example                      
@@ -12,5 +16,8 @@ Playlist: [Vue JS 2 Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9
 Playlist: [Vue JS 2 Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa) by The Net Ninja  
 
 ### mini-blog (#29-44) 
-Playlist: [Vue JS 2 Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa) by The Net Ninja  
+Playlist: [Vue JS 2 Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa) by The Net Ninja              
+
+### post-manager
+Blog: [CRUD, VueJS, and Node App](https://developer.okta.com/blog/2018/02/15/build-crud-app-vuejs-node) by Okta
 

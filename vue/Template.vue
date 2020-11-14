@@ -1,12 +1,10 @@
 <template>
-  <div class="Template">
-    
-  </div>
+  <div></div>
 </template>
 
 <script>
   export default {
-    name: 'App',
+    name: 'Template',
     components: {
 
     },
