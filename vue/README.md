@@ -12,7 +12,10 @@ Playlist: [Vue JS 2 Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9
 ### ninja-cards (#21-26)   
 Playlist: [Vue JS 2 Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa) by The Net Ninja  
 
-### form (#27-28)   
+### form-1 (#27)   
+Playlist: [Vue JS 2 Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa) by The Net Ninja  
+
+### form-2 (#28)   
 Playlist: [Vue JS 2 Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa) by The Net Ninja  
 
 ### mini-blog (#29-44) 
