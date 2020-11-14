@@ -21,6 +21,3 @@ Playlist: [Vue JS 2 Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9
 ### mini-blog (#29-44) 
 Playlist: [Vue JS 2 Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa) by The Net Ninja              
 
-### post-manager
-Blog: [CRUD, VueJS, and Node App](https://developer.okta.com/blog/2018/02/15/build-crud-app-vuejs-node) by Okta
-
