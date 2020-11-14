@@ -1,9 +1,9 @@
 # todo-list
 
 ## Project Info
-Based on: "The Vue Tutorial for 2018" by DesignCourse                
-Video: https://www.youtube.com/watch?v=78tNYZUS-ps               
-Written: https://coursetro.com/courses/23/Vue-Tutorial-in-2018---Learn-Vue.js-by-Example          
+Tutorial: "The Vue Tutorial for 2018" by DesignCourse                
+Written Tutorial: https://coursetro.com/courses/23/Vue-Tutorial-in-2018---Learn-Vue.js-by-Example       
+Video: https://www.youtube.com/watch?v=78tNYZUS-ps                  
 Editor: Visual Studio Code
 
 ## Create vue project
