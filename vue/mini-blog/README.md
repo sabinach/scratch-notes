@@ -1,4 +1,4 @@
-# vue-netninja
+# mini-blog
 
 ## Project Info
 Based on: "Vue JS 2 Tutorial" by The Net Ninja                

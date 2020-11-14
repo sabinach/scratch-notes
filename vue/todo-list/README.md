@@ -1,4 +1,4 @@
-# vue-skills
+# todo-list
 
 ## Project Info
 Based on: "The Vue Tutorial for 2018" by DesignCourse                
