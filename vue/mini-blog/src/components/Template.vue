@@ -1,14 +1,17 @@
 <template>
-  <div>
-
-  </div>
+  <div></div>
 </template>
 
 <script>
   export default {
-    name: 'App',
-    data(){
+    name: 'Template',
+    components: {
 
+    },
+    data(){
+      return {
+        
+      }
     },
     methods: {
 
@@ -17,5 +20,4 @@
 </script>
 
 <style>
-  
 </style>

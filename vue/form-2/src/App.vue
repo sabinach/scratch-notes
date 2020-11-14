@@ -1,10 +1,12 @@
 <template>
-  <div id="app">
+  <div>
     <keep-alive>
       <component v-bind:is="component"></component>
     </keep-alive>
-    <button v-on:click="component = 'form-one'">Show form one</button>
-    <button v-on:click="component = 'form-two'">Show form two</button>
+    <div id='form-buttons'>
+      <button v-on:click="component = 'form-one'">Show form one</button>
+      <button v-on:click="component = 'form-two'">Show form two</button>
+    </div>
   </div>
 </template>
 
@@ -22,9 +24,6 @@
       return {
         component: 'form-one'
       }
-    },
-    methods: {
-
     }
   }
 </script>
@@ -33,5 +32,8 @@
   body{
     margin: 0;
     font-family: 'Nunito SemiBold';
+  }
+  #form-buttons{
+    text-align: center;
   }
 </style>
