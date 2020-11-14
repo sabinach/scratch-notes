@@ -1,28 +1,53 @@
 <template>
   <div id="ninjas">
     <ul>
-      <li v-for="ninja in ninjas" v-on:click="ninja.show = !ninja.show">
+      <li v-for="ninja in ninjas" v-bind:key="ninja" v-on:click="ninja.show = !ninja.show">
         <h2>{{ ninja.name }}</h2>
         <h3 v-show="ninja.show">{{ ninja.speciality }}</h3>
       </li>
     </ul>
+    <button v-on:click="deleteNinja">Delete Ninja</button>
   </div>
 </template>
 
 <script>
   export default {
+    props:{
+      ninjas:{
+        type: Array,
+        required: true
+      }
+    },
     data(){
       return {
-        ninjas: [
-          {name: 'Ryu', speciality: 'Vue Components', show: false},
-          {name: 'Crystal', speciality: 'HTML Wizardry', show: false},
-          {name: 'Hitoshi', speciality: 'Click Events', show: false},
-          {name: 'Tango', speciality: 'Conditionals', show: false},
-          {name: 'Kami', speciality: 'Webpack', show: false},
-          {name: 'Yoshi', speciality: 'Data Diggin', show: false}
-        ]
       }
+    },
+    methods: {
+      deleteNinja(){
+        this.ninjas.pop();
+      }
+    },
+    // lifecycle hooks
+    /*
+    beforeCreate(){
+      alert('beforeCreate');
+    },
+    created(){
+      alert('created'); // get stuff from database here, component created but not mounted yet, good for fetching data
+    },
+    beforeMount(){
+      alert('beforeMount'); 
+    },
+    mounted(){
+      alert('mounted'); // good for manipulating the DOM once it's been mounted
+    },
+    beforeUpdate(){
+      alert('beforeUpdate'); // fires when component updated
+    },
+    updated(){
+      alert('updated'); // good for manipulating the DOM once it's been mounted
     }
+    */
   }
 </script>
 
