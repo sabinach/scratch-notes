@@ -4,7 +4,7 @@
 
 | **URL** | **HTTP Verb**   |  **Action**|
 |------------|-------------|------------|
-| /                         | N/A          | show homepage
+| /                         | n/a          | show homepage
 | /addBlog            | POST      | add new blog
 | /articles              | GET        | show blog articles
 | /titles                  | GET        | show blog titles
