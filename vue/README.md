@@ -19,5 +19,8 @@ Playlist: [Vue JS 2 Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9
 Playlist: [Vue JS 2 Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa) by The Net Ninja  
 
 ### mini-blog (#29-44) 
-Playlist: [Vue JS 2 Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa) by The Net Ninja              
+Playlist: [Vue JS 2 Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa) by The Net Ninja    
+
+### project manager
+Playlist: [Vuetify Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9g0MQZfHwKcuB0Yswgb3gA5)          
 

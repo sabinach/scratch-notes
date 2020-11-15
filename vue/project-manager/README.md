@@ -1,8 +1,8 @@
-# form-2
+# project-manager
 
 ## Project Info
-Tutorial: "Vue JS 2 Tutorial #28" by The Net Ninja                
-Playlist: https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa                      
+Tutorial: "Vuetify Tutorial" by The Net Ninja                
+Playlist: https://www.youtube.com/playlist?list=PL4cUxeGkcC9g0MQZfHwKcuB0Yswgb3gA5                      
 Editor: Visual Studio Code    
 
 ## Create vue project

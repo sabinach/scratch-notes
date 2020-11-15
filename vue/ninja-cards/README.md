@@ -5,6 +5,11 @@ Tutorial: "Vue JS 2 Tutorial #21-26" by The Net Ninja
 Playlist: https://www.youtube.com/playlist?list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa                      
 Editor: Visual Studio Code
 
+## Create vue project
+```
+vue create <project-name>
+```
+
 ## Project setup
 ```
 npm install
