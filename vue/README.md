@@ -3,9 +3,9 @@
 ```scattered_notes.txt``` - Random notes taken while following The Net Ninja tutorials
 
 ### Setup
-Instructions via Vue CLI: https://cli.vuejs.org/guide/installation.html 
-```npm install -g @vue/cli```
-```vue --version```
+Instructions via Vue CLI: https://cli.vuejs.org/guide/installation.html             
+```npm install -g @vue/cli```                
+```vue --version```                
 ```npm update -g @vue/cli```
 
 ### todo-list
