@@ -8,11 +8,14 @@ Instructions: https://github.com/facebook/create-react-app
 ### pokemon
 Tutorial: [Build A Pokémon Application With React](https://youtu.be/o3ZUc7zH8BE) by Web Dev Simplified      
 
+### book-query
+Tutorial: [Infinite Scrolling With React](https://www.youtube.com/watch?v=NZKUirTtxcg) by Web Dev Simplified      
+
 -------------
 
 ## Project Info
 Tutorial: "XXX" by XXX              
-Video: XX                
+Video: XXX                
 Editor: Visual Studio Code
 
 ## Create react project
