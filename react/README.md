@@ -1,5 +1,5 @@
 ### Docs
-```Template.vue``` - Stock template for future ```.vue``` files         
+```Template.js``` - Stock template for future ```.js``` files         
 ```scattered_notes.txt``` - Random notes taken while following The Net Ninja tutorials
 
 ### Setup
