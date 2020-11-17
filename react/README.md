@@ -11,6 +11,12 @@ Tutorial: [Build A Pokémon Application With React](https://youtu.be/o3ZUc7zH8BE
 ### book-query
 Tutorial: [Infinite Scrolling With React](https://www.youtube.com/watch?v=NZKUirTtxcg) by Web Dev Simplified      
 
+### simple-login
+Tutorial: [React.js Simple Login Form with React-bootstrap](https://www.youtube.com/watch?v=9wkyXmO-p2o)
+
+### simple-cards
+Tutorial: [By Arsian](https://www.youtube.com/channel/UCe1NM6d7y7O1Q7ZKJ4lLSFw/videos)
+
 -------------
 
 ## Project Info
