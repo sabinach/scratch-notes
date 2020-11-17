@@ -3,13 +3,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Project Info
-Tutorial: "Complete React Tutorial (& Redux)" by The Net Ninja              
-Video: https://www.youtube.com/playlist?list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG                
+Tutorial: "Build A Pokémon Application With React" by Web Dev Simplified              
+Video: https://youtu.be/o3ZUc7zH8BE                
 Editor: Visual Studio Code
 
 ## Create react project
 ```
-npx create-react-app <project-name>
+npm init react-app <project-name>
+npm i axios
 ```
 
 ## Available Scripts

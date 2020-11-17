@@ -5,15 +5,17 @@
 ### Setup
 Instructions: https://github.com/facebook/create-react-app
 
-### todo-list
-Tutorial: [Complete React Tutorial (with Redux)](https://www.youtube.com/playlist?list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG) by The Net Ninja           
+### pokemon
+Tutorial: [Build A Pokémon Application With React](https://youtu.be/o3ZUc7zH8BE) by Web Dev Simplified      
 
-### mini-blog
-Tutorial: [Complete React Tutorial (with Redux)](https://www.youtube.com/playlist?list=PL4cUxeGkcC9ij8CfkAY2RAGb-tmkNwQHG) by The Net Ninja    
- 
-### XXX
-Tutorial: [XXX](XXX)
+-------------
 
-### modern-website
-Tutorial: [XXX](XXX)
+## Project Info
+Tutorial: "XXX" by XXX              
+Video: XX                
+Editor: Visual Studio Code
 
+## Create react project
+```
+npm init react-app <project-name>
+```

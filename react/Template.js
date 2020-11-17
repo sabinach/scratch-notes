@@ -1,9 +1,9 @@
-function Template() {
-  return (
-    <div className="Template">
-      <p>TBD</p>
-    </div>
-  );
-}
+import React from 'react'
 
-export default Template;
+export default function Template() {
+  return (
+    <div>
+      
+    </div>
+  )
+}
