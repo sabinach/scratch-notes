@@ -1,5 +1,5 @@
 ### Docs
-```Template.js``` - Stock template for future ```.js``` files         
+```templates/``` - Stock template for future ```.js``` files         
 ```scattered_notes.txt``` - Random notes taken while following The Net Ninja tutorials
 
 ### Setup
@@ -13,18 +13,3 @@ Tutorial: [Infinite Scrolling With React](https://www.youtube.com/watch?v=NZKUir
 
 ### simple-login
 Tutorial: [React.js Simple Login Form with React-bootstrap](https://www.youtube.com/watch?v=9wkyXmO-p2o)
-
-### simple-cards
-Tutorial: [By Arsian](https://www.youtube.com/channel/UCe1NM6d7y7O1Q7ZKJ4lLSFw/videos)
-
--------------
-
-## Project Info
-Tutorial: "XXX" by XXX              
-Video: XXX                
-Editor: Visual Studio Code
-
-## Create react project
-```
-npm init react-app <project-name>
-```
