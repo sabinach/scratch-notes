@@ -1,0 +1,82 @@
+Use this.setState
+Use (e) => to access state in functions
+onClick={functionName}
+Only one div 
+Button default when pressed will refresh page
+	e.preventDefault();
+
+<form>
+	<input>
+	<button>
+</form>
+
+<Ninjas ninjas={ninjas}/>
+Function Ninjas({ninjas})
+
+Components: child -> parent
+Props: parent -> child
+
+Container component: state info, no UI — use classes 
+Ui component: no state, only UI — use functional
+
+Functional: pass props in, cannot use this 
+class: state given via this
+
+—————————————
+
+Props handled outside/between components
+State handled inside components
+
+Changing state -> re-render component based on something user has done
+Props -> useful for displaying info in a component without hardcoding it (aka props is a variable passed into a function)
+
+Title component, no state bc won’t change, but takes in an initial prop
+Counter component, need state cause constantly updating
+Form, use state 
+
+Hooks are only available in functions, not in classes 
+
+React
+React-Bootstrap
+React-Routing
+React Authentication 
+
+useState()
+setCount(prevCount => prevCount -1) <— if modifying previous state, else will override if called twice
+Will run every time at initialization useState(fibonacci), so should use function to run once useState(()=>{))
+Only modifying the components you want to change if the original state is an object, just return the singular key you want to change, not everything
+{…prevState, count: prevState.count - 1}
+Objects should be separated into individual states
+
+useEffect()
+No 2nd parameter - render every time
+[] - once on mount
+[value] - only executed when value changed
+Return run first as cleanup before rest of the code 
+
+useMemo() - cache value
+Enter function is re-rendered EVERY change
+Slow functions bad if reloaded every single time
+useMemo(()=>{}, [])
+Additional memory issue, so only use if need performance beefits
+Returns return item, and saves item to const name
+
+useRef()
+Every time const is reloaded it will be saved as a new memory
+Similar to state, but does not re-render, more like a reactive item not a causal
+inputRef=useRef()
+Button, o’clock —> inputref.current —> <input value>
+Do NOT use to replace state, will NOT re-render the page!
+Persist state between renders, ie. Current Val and here’s my prevail
+
+useContext()
+Can be used to pass down a value to all children 
+
+useReducer()
+Change more complex states (ie. Objects) one place through a known function call, as opposed to multiple ie increase/decrease
+Overkill for simple apps
+Good for complex apps with many nests  
+
+useCallback()
+Similar to useMemo() in that new variables created are resaved, so this fixes that
+Returns function, and saves function to const name
