@@ -19,9 +19,10 @@ npm i express bcrypt jsonwebtoken dotenv
 npm i --save-dev nodemon
 ```
 
-## To run server
+## To run servers
 ```
 npm run devStart
+npm run devStartAuth
 ```
 
 ## Available Scripts

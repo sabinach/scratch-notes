@@ -1,0 +1,27 @@
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "username": "Sabina",
+  "password": "password"
+}
+
+###
+
+GET http://localhost:3000/users
+
+###
+
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+  "username": "Sabina"
+  //"username": "Jim"
+}
+
+###
+
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNhYmluYSIsImlhdCI6MTYwNjY1MTIzNn0.SAtZ8LhvCJuYp9j8PVKA2M5ENqQUE67kC9y4zAHvs8A
+#Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkppbSIsImlhdCI6MTYwNjY1MTI2NH0.oTWJ5l3PLo8XbGOfIlRMj7qUsN7_lDgf58FrCFEhOzw

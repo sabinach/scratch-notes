@@ -16,7 +16,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "devStart": "nodemon server.js",
+    "devStart": "nodemon server/postServer.js",
+    "devStartAuth": "nodemon server/authServer.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

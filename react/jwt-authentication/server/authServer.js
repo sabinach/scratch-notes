@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const app = express();
 
@@ -8,6 +10,7 @@ app.use(express.json());
 
 /****************** Users ******************/
 
+/*
 // temp database
 const users = [];
 
@@ -46,42 +49,30 @@ app.post("/login", async (req, res) => {
   try {
     // compare requested/session hashedPassword with stored/database hashedPassword
     if (await bcrypt.compare(req.body.password, user.password)) {
-      res.send("Authentication: Success");
+      res.status(200).send("Authentication: Success");
     } else {
-      res.send("Authentication: Failed");
+      res.status(200).send("Authentication: Failed");
     }
   } catch {
     res.status(500).send("error");
   }
 });
+*/
 
-/****************** Posts ******************/
-
-// temp database
-const posts = [
-  {
-    username: "Sabina",
-    title: "Post 1",
-  },
-  {
-    username: "Jim",
-    title: "Post 2",
-  },
-];
-
-// get all posts
-app.get("/posts", (req, res) => {
-  res.json(posts);
-});
-
-/****************** Login ******************/
+/****************** Login (Hash + AccessToken) ******************/
 
 // create a token
 app.post("/login", (req, res) => {
   // authenticatication - confirms that users are who they say they are
   // authorization - gives those users permission to access a resource
 
-  const username = req.body.username;
+  // this is returned later in jwt.verify()
+  const user = { username: req.body.username };
+
+  // return an access token if a user is signed in
+  const accessToken = jwt.sign(user, process.env.ACCESS_SECRET_TOKEN);
+  console.log(`accessToken: ${accessToken}`);
+  res.json({ accessToken: accessToken }); // save this accessToken in your current server/session as a cookie
 });
 
-app.listen(3000);
+app.listen(4000);
