@@ -10,54 +10,83 @@ app.use(express.json());
 
 /****************** Users ******************/
 
-/*
 // temp database
 const users = [];
 
 // get all users
 app.get("/users", (req, res) => {
-  res.json(users);
+  res.status(200).json(users);
 });
 
 // create a user
 //hash (salt + 'password') // dddddddd
 //hash (salt2 + 'password') // eeeeeeee
 app.post("/users", async (req, res) => {
+  console.log("creating new user...");
   try {
     //const salt = await bcrypt.genSalt();
     //console.log(`salt: ${salt}`)
     const hashedPassword = await bcrypt.hash(req.body.password, 10); // generates and create hash in one step!
+    console.log(`username: ${req.body.username}`); // requested username
     console.log(`hashedPassword: ${hashedPassword}`); // salt info included within hashedPassword
     const user = {
       username: req.body.username,
-      password: hashedPassword,
+      hashedPassword: hashedPassword,
     };
     users.push(user);
+    users.forEach((user) =>
+      console.log(
+        `added user to users database:\n\t username: ${user.username} \n\t hashedPassword: ${user.hashedPassword}`
+      )
+    );
     res.status(201).send("Created user");
   } catch {
     res.status(500).send("error");
   }
 });
 
+/****************** Login ******************/
+
 // login
 app.post("/login", async (req, res) => {
-  const user = users.find((user) => (user.username = req.body.username));
-  console.log(`user: ${user}`);
-  if (user === null) {
-    return res.status(400).send("Cannot find user");
+  console.log("logging in...");
+  // authenticatication - confirms that users are who they say they are
+  // authorization - gives those users permission to access a resource
+
+  // this is returned later in jwt.verify()
+  const username = req.body.username;
+  const password = req.body.password;
+
+  // this will be calling the database
+  const loggedInUser = users.find((user) => user.username === username); // this will be email
+
+  if (loggedInUser === null) {
+    return res.status(400).send("Cannot find loggedInUser");
   }
   try {
-    // compare requested/session hashedPassword with stored/database hashedPassword
-    if (await bcrypt.compare(req.body.password, user.password)) {
-      res.status(200).send("Authentication: Success");
+    // compare requested/session password (raw) with stored/database hashedPassword
+    if (await bcrypt.compare(password, loggedInUser.hashedPassword)) {
+      // return an refreshToken if a user is signed in
+      // save this refreshToken in your current server/session as a cookie
+      const refreshToken = generateRefreshToken(loggedInUser);
+      refreshTokens.push(refreshToken);
+      refreshTokens.forEach((refreshToken) =>
+        console.log(`added refreshToken to database: ${refreshToken}`)
+      );
+      res.status(200).json({
+        message: "Authentication: Success",
+        refreshToken: refreshToken,
+      });
     } else {
-      res.status(200).send("Authentication: Failed");
+      res.status(200).json({
+        message: "Authentication: Failed",
+        refreshToken: null,
+      });
     }
   } catch {
     res.status(500).send("error");
   }
 });
-*/
 
 /****************** Create Tokens ******************/
 
@@ -74,6 +103,7 @@ function generateRefreshToken(user) {
 
 // token = refreshToken, continuously generate refresh tokens
 app.post("/token", (req, res) => {
+  console.log("generate new refreshToken...");
   const refreshToken = req.body.refreshToken;
   console.log(`refreshToken: ${refreshToken}`);
   if (refreshToken === undefined) {
@@ -89,33 +119,20 @@ app.post("/token", (req, res) => {
     const accessToken = generateAccessToken({ username: user.username });
     console.log(`user.username: ${user.username}`);
     console.log(`accessToken: ${accessToken}`);
-    res.json({ accessToken: accessToken });
+    res.status(200).json({ accessToken: accessToken });
   });
-});
-
-/****************** Login ******************/
-
-// create a token
-app.post("/login", (req, res) => {
-  // authenticatication - confirms that users are who they say they are
-  // authorization - gives those users permission to access a resource
-
-  // this is returned later in jwt.verify()
-  const user = { username: req.body.username };
-
-  // return an refreshToken if a user is signed in
-  const refreshToken = generateRefreshToken(user);
-  refreshTokens.push(refreshToken);
-  console.log(`refreshToken: ${refreshToken}`);
-  res.json({ refreshToken: refreshToken }); // save this accessToken in your current server/session as a cookie
 });
 
 /****************** Logout ******************/
 
 // delete refresh tokens
 app.delete("/logout", (req, res) => {
+  console.log("logging out...");
   refreshTokens = refreshTokens.filter(
     (refreshToken) => refreshToken !== req.body.refreshToken
+  );
+  refreshTokens.forEach((refreshToken) =>
+    console.log(`deleted refreshToken from database: ${refreshToken}`)
   );
   res.sendStatus(204).send("deleted refreshToken");
 });

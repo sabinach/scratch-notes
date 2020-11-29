@@ -44,7 +44,9 @@ const posts = [
 
 // get all posts, make sure user is signed in by requiring checking accessToken
 app.get("/posts", authenticateToken, (req, res) => {
-  res.json(posts.filter((post) => post.username === req.user.username)); // filter for only user's posts
+  res
+    .status(200)
+    .json(posts.filter((post) => post.username === req.user.username)); // filter for only user's posts
 });
 
 app.listen(3000);

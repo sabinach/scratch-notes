@@ -1,3 +1,4 @@
+## Create a new user
 POST http://localhost:4000/users
 Content-Type: application/json
 
@@ -8,17 +9,22 @@ Content-Type: application/json
 
 ###
 
+## Get list of users
 GET http://localhost:4000/users
 
-###
+#######################################################
+## Refresh tokens carry the information necessary to get a new access token. 
+## In other words, whenever an access token is required to access a specific resource, 
+## a client may use a refresh token to get a new access token issued by the authentication server.
 
 # Create user-specific refreshToken from username (only done once to get refreshToken --> store in database with username)
+## this will be the raw email + password (not hash) 
 POST http://localhost:4000/login
 Content-Type: application/json
 
 {
-  "username": "Sabina"
-  //"username": "Jim"
+  "username": "Sabina", 
+  "password": "password"
 }
 
 ###
@@ -28,7 +34,7 @@ POST http://localhost:4000/token
 Content-Type: application/json
 
 {
-  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNhYmluYSIsImlhdCI6MTYwNjY1NTEwM30.06QCLJt5-nwLezVm2hCqn7p-tnspYPQftVeRdm_1Y5c"
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNhYmluYSIsImhhc2hlZFBhc3N3b3JkIjoiJDJiJDEwJDhoRHdzNGRYUW5mdERUdFd0QmZhSGVyTS91T0xDWHNLY2NJdkJIZWVuajVrN1FoOTJoSDlpIiwiaWF0IjoxNjA2NjU3NjQwfQ.4btrd6xL0vW-QYarD4B37tD6_jjqLbvna_HjebzSbnY"
 }
 
 ###
@@ -38,11 +44,11 @@ DELETE http://localhost:4000/logout
 Content-Type: application/json
 
 {
-  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNhYmluYSIsImlhdCI6MTYwNjY1NTEwM30.06QCLJt5-nwLezVm2hCqn7p-tnspYPQftVeRdm_1Y5c"
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNhYmluYSIsImhhc2hlZFBhc3N3b3JkIjoiJDJiJDEwJDhoRHdzNGRYUW5mdERUdFd0QmZhSGVyTS91T0xDWHNLY2NJdkJIZWVuajVrN1FoOTJoSDlpIiwiaWF0IjoxNjA2NjU3NjQwfQ.4btrd6xL0vW-QYarD4B37tD6_jjqLbvna_HjebzSbnY"
 }
 
 ###
 
 # Function to get user's posts using accessToken (only valid for 15 sec)
 GET http://localhost:3000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNhYmluYSIsImlhdCI6MTYwNjY1NDgzNywiZXhwIjoxNjA2NjU0ODUyfQ.SOWt7_6pFk4Uq5dM_Q_camzT6GH-YP6Ui3GNyURlogs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNhYmluYSIsImlhdCI6MTYwNjY1NzY4MiwiZXhwIjoxNjA2NjU3Njk3fQ.Uxl2tKzquvV_VNDE52kVGbcSFIBQaBiOKS5YzHIUC60
