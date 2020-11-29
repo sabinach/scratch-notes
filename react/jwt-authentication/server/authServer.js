@@ -59,7 +59,17 @@ app.post("/login", async (req, res) => {
 });
 */
 
-/****************** Login (Hash + AccessToken) ******************/
+/****************** Tokens ******************/
+
+function generateAccessToken(user) {
+  return jwt.sign(user, process.env.ACCESS_SECRET_TOKEN, { expiresIn: "15s" });
+}
+
+function generateRefreshToken(user) {
+  return jwt.sign(user, process.env.REFRESH_SECRET_TOKEN);
+}
+
+/****************** Login ******************/
 
 // create a token
 app.post("/login", (req, res) => {
@@ -70,9 +80,11 @@ app.post("/login", (req, res) => {
   const user = { username: req.body.username };
 
   // return an access token if a user is signed in
-  const accessToken = jwt.sign(user, process.env.ACCESS_SECRET_TOKEN);
+  const accessToken = generateAccessToken(user);
+  const refreshToken = generateRefreshToken(user);
   console.log(`accessToken: ${accessToken}`);
-  res.json({ accessToken: accessToken }); // save this accessToken in your current server/session as a cookie
+  console.log(`refreshToken: ${refreshToken}`);
+  res.json({ accessToken: accessToken, refreshToken: refreshToken }); // save this accessToken in your current server/session as a cookie
 });
 
 app.listen(4000);
