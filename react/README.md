@@ -13,3 +13,7 @@ Tutorial: [Infinite Scrolling With React](https://www.youtube.com/watch?v=NZKUir
 
 ### simple-login
 Tutorial: [React.js Simple Login Form with React-bootstrap](https://www.youtube.com/watch?v=9wkyXmO-p2o)
+
+### jwt-authentication
+Tutorial: [User Authentication with Node.js - Password Login](https://www.youtube.com/watch?v=Ud5xKCYQTjM)
+Tutorial: [JWT Authentication with Node.js](https://www.youtube.com/watch?v=mbsmsi7l3r4)
