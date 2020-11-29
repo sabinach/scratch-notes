@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Project Info (Part 1)
 Tutorial: "User Authentication with Node.js - Password Login" by Web Dev Simplified              
-Video: https://www.youtube.com/watch?v=Ud5xKCYQTjM
+Video: https://www.youtube.com/watch?v=Ud5xKCYQTjM             
 Editor: Visual Studio Code
 
 ## Project Info (Part 2)
