@@ -15,7 +15,7 @@ Editor: Visual Studio Code
 ## Create react project
 ```
 npm init react-app <project-name>
-npm i express jsonwebtoken dotenv
+npm i express bcrypt jsonwebtoken dotenv
 npm i --save-dev nodemon
 ```
 
