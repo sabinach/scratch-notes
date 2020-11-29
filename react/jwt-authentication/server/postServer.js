@@ -8,17 +8,18 @@ app.use(express.json());
 
 /****************** Middleware ******************/
 
+// token = accessToken
 function authenticateToken(req, res, next) {
   const authHeader = req.headers["authorization"]; // Bearer TOKEN
-  const token = authHeader && authHeader.split(" ")[1]; // get second value of request: TOKEN
+  const accessToken = authHeader && authHeader.split(" ")[1]; // get second value of request: TOKEN
   console.log(`authHeader: ${authHeader}`);
-  console.log(`token: ${token}`);
-  if (token === undefined) {
-    return res.status(401).send("error: token not received");
+  console.log(`accessToken: ${accessToken}`);
+  if (accessToken === undefined) {
+    return res.status(401).send("error: accessToken not received");
   }
-  jwt.verify(token, process.env.ACCESS_SECRET_TOKEN, (err, user) => {
+  jwt.verify(accessToken, process.env.ACCESS_SECRET_TOKEN, (err, user) => {
     if (err) {
-      return res.sendStatus(403).send("error: invalid token");
+      return res.sendStatus(403).send("error: invalid accessToken");
     }
     console.log(`user: ${user}`);
     console.log(`user.username: ${user.username}`);

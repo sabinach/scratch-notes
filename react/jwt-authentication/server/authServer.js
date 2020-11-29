@@ -59,7 +59,10 @@ app.post("/login", async (req, res) => {
 });
 */
 
-/****************** Tokens ******************/
+/****************** Create Tokens ******************/
+
+// temp database
+let refreshTokens = [];
 
 function generateAccessToken(user) {
   return jwt.sign(user, process.env.ACCESS_SECRET_TOKEN, { expiresIn: "15s" });
@@ -68,6 +71,27 @@ function generateAccessToken(user) {
 function generateRefreshToken(user) {
   return jwt.sign(user, process.env.REFRESH_SECRET_TOKEN);
 }
+
+// token = refreshToken, continuously generate refresh tokens
+app.post("/token", (req, res) => {
+  const refreshToken = req.body.refreshToken;
+  console.log(`refreshToken: ${refreshToken}`);
+  if (refreshToken === undefined) {
+    return res.status(401).send("error: refreshToken not received");
+  }
+  if (!refreshTokens.includes(refreshToken)) {
+    return res.status(403).send("error: refreshToken does not exist");
+  }
+  jwt.verify(refreshToken, process.env.REFRESH_SECRET_TOKEN, (err, user) => {
+    if (err) {
+      return res.sendStatus(403).send("error: invalid refreshToken");
+    }
+    const accessToken = generateAccessToken({ username: user.username });
+    console.log(`user.username: ${user.username}`);
+    console.log(`accessToken: ${accessToken}`);
+    res.json({ accessToken: accessToken });
+  });
+});
 
 /****************** Login ******************/
 
@@ -79,12 +103,21 @@ app.post("/login", (req, res) => {
   // this is returned later in jwt.verify()
   const user = { username: req.body.username };
 
-  // return an access token if a user is signed in
-  const accessToken = generateAccessToken(user);
+  // return an refreshToken if a user is signed in
   const refreshToken = generateRefreshToken(user);
-  console.log(`accessToken: ${accessToken}`);
+  refreshTokens.push(refreshToken);
   console.log(`refreshToken: ${refreshToken}`);
-  res.json({ accessToken: accessToken, refreshToken: refreshToken }); // save this accessToken in your current server/session as a cookie
+  res.json({ refreshToken: refreshToken }); // save this accessToken in your current server/session as a cookie
+});
+
+/****************** Logout ******************/
+
+// delete refresh tokens
+app.delete("/logout", (req, res) => {
+  refreshTokens = refreshTokens.filter(
+    (refreshToken) => refreshToken !== req.body.refreshToken
+  );
+  res.sendStatus(204).send("deleted refreshToken");
 });
 
 app.listen(4000);

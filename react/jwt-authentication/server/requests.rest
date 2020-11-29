@@ -1,4 +1,4 @@
-POST http://localhost:3000/users
+POST http://localhost:4000/users
 Content-Type: application/json
 
 {
@@ -8,10 +8,11 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3000/users
+GET http://localhost:4000/users
 
 ###
 
+# Create user-specific refreshToken from username (only done once to get refreshToken --> store in database with username)
 POST http://localhost:4000/login
 Content-Type: application/json
 
@@ -22,6 +23,26 @@ Content-Type: application/json
 
 ###
 
+# Function for generating accessToken from given refreshToken
+POST http://localhost:4000/token
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNhYmluYSIsImlhdCI6MTYwNjY1NTEwM30.06QCLJt5-nwLezVm2hCqn7p-tnspYPQftVeRdm_1Y5c"
+}
+
+###
+
+# Function to delete refreshToken from the database
+DELETE http://localhost:4000/logout
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNhYmluYSIsImlhdCI6MTYwNjY1NTEwM30.06QCLJt5-nwLezVm2hCqn7p-tnspYPQftVeRdm_1Y5c"
+}
+
+###
+
+# Function to get user's posts using accessToken (only valid for 15 sec)
 GET http://localhost:3000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNhYmluYSIsImlhdCI6MTYwNjY1MTIzNn0.SAtZ8LhvCJuYp9j8PVKA2M5ENqQUE67kC9y4zAHvs8A
-#Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkppbSIsImlhdCI6MTYwNjY1MTI2NH0.oTWJ5l3PLo8XbGOfIlRMj7qUsN7_lDgf58FrCFEhOzw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNhYmluYSIsImlhdCI6MTYwNjY1NDgzNywiZXhwIjoxNjA2NjU0ODUyfQ.SOWt7_6pFk4Uq5dM_Q_camzT6GH-YP6Ui3GNyURlogs
