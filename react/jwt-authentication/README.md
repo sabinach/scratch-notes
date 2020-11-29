@@ -12,6 +12,11 @@ Tutorial: "JWT Authentication with Node.js" by Web Dev Simplified
 Video: https://www.youtube.com/watch?v=mbsmsi7l3r4         
 Editor: Visual Studio Code
 
+## About JWT / RefreshTokens (long-term user-specific) / AccessTokens (short-term session-specific)
+https://auth0.com/blog/refresh-tokens-what-are-they-and-when-to-use-them/                              
+https://wp-rocket.me/blog/difference-json-web-tokens-vs-session-cookies/                           
+https://hasura.io/blog/best-practices-of-using-jwt-with-graphql/
+
 ## Create react project
 ```
 npm init react-app <project-name>

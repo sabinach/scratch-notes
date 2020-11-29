@@ -93,6 +93,7 @@ app.post("/login", async (req, res) => {
 // temp database
 let refreshTokens = [];
 
+// USER IS THE PAYLOAD!!! - username, email, jwt_token
 function generateAccessToken(user) {
   return jwt.sign(user, process.env.ACCESS_SECRET_TOKEN, { expiresIn: "15s" });
 }
