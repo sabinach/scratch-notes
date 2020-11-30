@@ -33,7 +33,7 @@ app.post("/users", async (req, res) => {
       username: req.body.username,
       hashedPassword: hashedPassword,
     };
-    users.push(user);
+    users.push(user); // database
     users.forEach((user) =>
       console.log(
         `added user to users database:\n\t username: ${user.username} \n\t hashedPassword: ${user.hashedPassword}`

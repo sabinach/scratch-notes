@@ -17,8 +17,9 @@ GET http://localhost:4000/users
 ## In other words, whenever an access token is required to access a specific resource, 
 ## a client may use a refresh token to get a new access token issued by the authentication server.
 
-# Create user-specific refreshToken from username (only done once to get refreshToken --> store in database with username)
-#    this will be the raw email + password (not hash) 
+# Create user-specific refreshToken from username (only done once to get refreshToken 
+#    --> store in database with username)
+#    --> this will be the raw email + password (not hash) 
 # USE .env (super secret server only)
 # SAVE GENERATED REFRESHTOKEN IN CLIENT AND DATABASE
 POST http://localhost:4000/login
@@ -38,7 +39,7 @@ POST http://localhost:4000/token
 Content-Type: application/json
 
 {
-  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNhYmluYSIsImhhc2hlZFBhc3N3b3JkIjoiJDJiJDEwJERCT252OW15RnFTZ0F3TFVFbXNSM2UuMWg0eElnWThzbEI3Um91OXRvMmg4aG9FdXpmT29DIiwiaWF0IjoxNjA2NjYyODAzfQ.q-q13Ii--pX4ejHRRDDur65BJt7287sK13-uN2OvLng"
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNhYmluYSIsImhhc2hlZFBhc3N3b3JkIjoiJDJiJDEwJC5PNnNVaGFKaWdGZ25JcTRVcW1sSWV4TnkubloxdndlVHhDZld0cjRvSlU1dUh5dktWUkh5IiwiaWF0IjoxNjA2NzAyMDQ0fQ.TsmqpY8VVaJa-HKUK2N2LoEM4cbII8zu7kV5MFDuoMk"
 }
 
 ###
@@ -48,7 +49,7 @@ DELETE http://localhost:4000/logout
 Content-Type: application/json
 
 {
-  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNhYmluYSIsImhhc2hlZFBhc3N3b3JkIjoiJDJiJDEwJERCT252OW15RnFTZ0F3TFVFbXNSM2UuMWg0eElnWThzbEI3Um91OXRvMmg4aG9FdXpmT29DIiwiaWF0IjoxNjA2NjYyODAzfQ.q-q13Ii--pX4ejHRRDDur65BJt7287sK13-uN2OvLng"
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNhYmluYSIsImhhc2hlZFBhc3N3b3JkIjoiJDJiJDEwJC5PNnNVaGFKaWdGZ25JcTRVcW1sSWV4TnkubloxdndlVHhDZld0cjRvSlU1dUh5dktWUkh5IiwiaWF0IjoxNjA2NzAyMDQ0fQ.TsmqpY8VVaJa-HKUK2N2LoEM4cbII8zu7kV5MFDuoMk"
 }
 
 ###
@@ -56,4 +57,4 @@ Content-Type: application/json
 # Function to get user's posts using accessToken (only valid for 15 sec)
 # USE CLIENT ACCESSTOKEN FOR REQUESTS
 GET http://localhost:3000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNhYmluYSIsImlhdCI6MTYwNjY2Mjg1MSwiZXhwIjoxNjA2NjYyODY2fQ.5VcgUx8nyQtA17NrLLHLbYfYaUywMt5mHilOOAhfL-A
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNhYmluYSIsImlhdCI6MTYwNjcwMjA2OSwiZXhwIjoxNjA2NzAyMDg0fQ.cmZIxKyL568xqDyEl9K3colwYz7IoqQhfRZH5nQNxfY
