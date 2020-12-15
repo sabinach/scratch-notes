@@ -1,4 +1,7 @@
-## To Run:
+## Based on:
+https://medium.com/better-programming/building-an-api-with-firebase-109041721f77
+
+## To Run Server:
 ```cd functions```           
 ```npm run serve```
 
@@ -7,3 +10,9 @@
 
 ## Deploy URL
 ```https://us-central1-fir-api-309a8.cloudfunctions.net/app/<api-endpoint>```
+
+## Project Details
+- Node JS
+- Express
+- Postman
+- Cloud Firestore (Firebase)
