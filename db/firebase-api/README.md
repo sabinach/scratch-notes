@@ -1,6 +1,9 @@
 ## Based on:
 https://medium.com/better-programming/building-an-api-with-firebase-109041721f77
 
+## Cloud Firestore
+```https://console.firebase.google.com/u/0/project/fir-api-309a8/firestore```
+
 ## To Run Server:
 ```cd functions```           
 ```npm run serve```
