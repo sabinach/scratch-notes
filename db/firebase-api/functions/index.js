@@ -21,6 +21,6 @@ app.get("/hello-world", (req, res) => {
 
 // api routes
 const indexRouter = require("./routes/index");
-app.use("/api", indexRouter);
+app.use("/api/items", indexRouter);
 
 exports.app = functions.https.onRequest(app);
