@@ -3,6 +3,12 @@
 ## Based on:
 https://medium.com/better-programming/building-an-api-with-firebase-109041721f77
 
+# Project Details
+- Node JS
+- Express
+- Postman
+- Cloud Firestore (Firebase)
+
 ## Cloud Firestore
 ```https://console.firebase.google.com/u/0/project/fir-api-309a8/firestore```
 
@@ -16,8 +22,3 @@ https://medium.com/better-programming/building-an-api-with-firebase-109041721f77
 ## Deploy URL
 ```https://us-central1-fir-api-309a8.cloudfunctions.net/app/<api-endpoint>```
 
-## Project Details
-- Node JS
-- Express
-- Postman
-- Cloud Firestore (Firebase)
