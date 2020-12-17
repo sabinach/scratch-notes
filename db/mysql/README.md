@@ -18,6 +18,7 @@ Make sure MySQL Server is ON via the System Preferences Panel, then in terminal,
 ```mysql -u root -p```                 
 ```ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234';```                   
 ```flush privileges;```                 
+```SHOW DATABASES;```             
 ```CREATE DATABASE customers;```                 
 ```USE customers```                 
 ```SHOW TABLES;```                 
