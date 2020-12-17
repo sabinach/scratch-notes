@@ -31,4 +31,4 @@ Make sure MySQL Server is ON via the System Preferences Panel, then in terminal,
 ```http://localhost:3000/```
 
 ## Deploy URL
-```XXX``
+```https://sabinach-mysql.herokuapp.com/```
