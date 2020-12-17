@@ -10,8 +10,11 @@
 - Postman
 - MySQL
 
-## MySQL
-```XXX```
+## MySQL Download
+```https://dev.mysql.com/downloads/mysql/```
+
+## To Run MySQL:
+Make sure MySQL Server is ON in the System Preferences Panel, then in terminal, run: ```mysql -u root -p```      
 
 ## To Run Server:
 ```node server.js```           

@@ -1,21 +1,23 @@
-module.exports = (app) => {
-  const customers = require("./customers.js");
+const express = require("express");
+const router = express.Router();
+const customers = require("./customers.js");
 
-  // Retrieve all Customers
-  app.get("/", customers.findAll);
+// Retrieve all Customers
+router.get("/", customers.findAll);
 
-  // Retrieve a single Customer with id
-  app.get("/:id", customers.findOne);
+// Retrieve a single Customer with id
+router.get("/:id", customers.findOne);
 
-  // Create a new Customer
-  app.post("/", customers.create);
+// Create a new Customer
+router.post("/", customers.create);
 
-  // Update a Customer with id
-  app.put("/:id", customers.update);
+// Update a Customer with id
+router.put("/:id", customers.update);
 
-  // Delete a Customer with id
-  app.delete("/:id", customers.delete);
+// Delete a Customer with id
+router.delete("/:id", customers.delete);
 
-  // Delete all Customers
-  app.delete("/", customers.deleteAll);
-};
+// Delete all Customers
+router.delete("/", customers.deleteAll);
+
+module.exports = Object.freeze(router);

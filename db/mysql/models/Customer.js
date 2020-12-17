@@ -7,16 +7,16 @@ const Customer = function (customer) {
   this.active = customer.active;
 };
 
-Customer.create = (newCustomer, result) => {
-  sql.query("INSERT INTO customers SET ?", newCustomer, (err, res) => {
+Customer.getAll = (result) => {
+  sql.query("SELECT * FROM customers", (err, res) => {
     if (err) {
       console.log("error: ", err);
-      result(err, null);
+      result(null, err);
       return;
     }
 
-    console.log("created customer: ", { id: res.insertId, ...newCustomer });
-    result(null, { id: res.insertId, ...newCustomer });
+    console.log("customers: ", res);
+    result(null, res);
   });
 };
 
@@ -39,16 +39,16 @@ Customer.findById = (id, result) => {
   });
 };
 
-Customer.getAll = (result) => {
-  sql.query("SELECT * FROM customers", (err, res) => {
+Customer.create = (newCustomer, result) => {
+  sql.query("INSERT INTO customers SET ?", newCustomer, (err, res) => {
     if (err) {
       console.log("error: ", err);
-      result(null, err);
+      result(err, null);
       return;
     }
 
-    console.log("customers: ", res);
-    result(null, res);
+    console.log("created customer: ", { id: res.insertId, ...newCustomer });
+    result(null, { id: res.insertId, ...newCustomer });
   });
 };
 
