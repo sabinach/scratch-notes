@@ -1,4 +1,4 @@
-const Customer = require("../models/Customer.js");
+const Customer = require("../models/customer.model.js");
 
 // Retrieve all Customers from the database.
 exports.findAll = (req, res) => {

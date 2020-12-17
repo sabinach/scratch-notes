@@ -15,8 +15,8 @@ app.get("/", (req, res) => {
 });
 
 // api routes
-const indexRouter = require("./routes/index");
-app.use("/api/customers", indexRouter);
+const customerRouter = require("./routes/customer.routes.js");
+app.use("/api/customers", customerRouter);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 3000;
