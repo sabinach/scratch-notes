@@ -3,6 +3,7 @@
 ## Based on:
 - https://bezkoder.com/node-js-rest-api-express-mysql/
 - https://bezkoder.com/deploy-node-js-app-heroku-cleardb-mysql/
+- https://www.freecodecamp.org/news/create-a-react-frontend-a-node-express-backend-and-connect-them-together-c5798926047c/
 
 ## Project Details
 - Node JS
