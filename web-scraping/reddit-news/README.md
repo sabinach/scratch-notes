@@ -1,14 +1,14 @@
-# Web Scraping (Primier League)
+# Web Scraping (Reddit News)
 
 Specs:
 - NodeJS
-- Axios
 - Cheerio
+- Puppeteer
 
 Tutorial:          
 https://pusher.com/tutorials/web-scraper-node
 
-Scraped Website:
+Scraped Website:      
 https://www.reddit.com/r/news/
 
 To Run:        
