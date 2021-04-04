@@ -14,7 +14,7 @@ Scraped Website:
 - https://www.forextradingbig.com/instaforex-broker-review/?ref=hackernoon.com
 
 To Run:        
-```node scraper.js```
+- ```node scraper.js```
 
 ## premierleague
 
@@ -30,7 +30,7 @@ Scraped Website:
 - https://www.premierleague.com/stats/top/players/goals?se=-1&cl=-1&iso=-1&po=-1?se=-1
 
 To Run:        
-```node scraper.js```
+- ```node scraper.js```
 
 ## reddit-scraping
 
@@ -45,7 +45,7 @@ Scraped Website:
 - https://www.reddit.com/r/scraping/
 
 To Run:        
-```node scraper.js```
+- ```node scraper.js```
 
 
 ## ycombinator
