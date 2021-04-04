@@ -11,8 +11,7 @@
 
 Tutorial: https://www.tutorialsteacher.com/d3js       
 
-NOTE:
-- Data loading requires local server. Use Brackets or run local server: 
+Data loading requires local server. Use Brackets or run local server: 
 ```
 cd [folder]
 http-server ./
