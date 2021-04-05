@@ -1,23 +1,22 @@
 # D3 (v4)
 
-### D3 Graph Gallery
+### examples/
 
+From: [D3 Graph Gallery](https://www.d3-graph-gallery.com/interactivity.html)
 - [Brush](https://www.d3-graph-gallery.com/graph/interactivity_brush.html)
-- [Line graph (Basic)](https://www.d3-graph-gallery.com/graph/line_basic.html)
-- [Line graph (Cursor)](https://www.d3-graph-gallery.com/graph/line_cursor.html)
-- [Line graph (Zoom)](https://www.d3-graph-gallery.com/graph/line_brushZoom.html)
+- [Line Graph (Basic)](https://www.d3-graph-gallery.com/graph/line_basic.html)
+- [Line Graph (Cursor)](https://www.d3-graph-gallery.com/graph/line_cursor.html)
+- [Line Graph (Nodes)](http://bl.ocks.org/romsson/f205420d21ced66810058d4cdf25c6dd)
+- [Line Graph (Tooltip)](https://observablehq.com/@d3/line-chart-with-tooltip)
+- [Line Graph (Zoom)](https://www.d3-graph-gallery.com/graph/line_brushZoom.html)
 
-### tutorial
+### tutorial/
 
-Tutorial: https://www.tutorialsteacher.com/d3js       
+- Tutorial: https://www.tutorialsteacher.com/d3js       
 
-Data loading requires local server. Use Brackets or run local server: 
-```
-cd [folder]
-http-server ./
-```
+- Data loading requires local server. Use Brackets or run local server via: ```cd [folder]; http-server ./```
 
-### template
+### template/
 
 - index.html
 - index.js

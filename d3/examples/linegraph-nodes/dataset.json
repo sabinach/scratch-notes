@@ -1,0 +1,13 @@
+[{"id" : 1, "name": "A", "value": 10, "date": "2016-01"},
+ {"id" : 2, "name": "B", "value": 30, "date": "2016-02"},
+ {"id" : 3, "name": "C", "value": 20, "date": "2016-03"},
+ {"id" : 4, "name": "D", "value": 40, "date": "2016-04"},
+ {"id" : 5, "name": "E", "value": 50, "date": "2016-05"},
+ {"id" : 6, "name": "F", "value": 20, "date": "2016-06"},
+ {"id" : 7, "name": "G", "value": 10, "date": "2016-07"},
+ {"id" : 8, "name": "H", "value": 80, "date": "2016-08"},
+ {"id" : 9, "name": "I", "value": 30, "date": "2016-09"},
+ {"id" : 10, "name": "J", "value": 70, "date": "2016-10"},
+ {"id" : 11, "name": "K", "value": 90, "date": "2016-11"},
+ {"id" : 12, "name": "L", "value": 40, "date": "2016-12"}
+]

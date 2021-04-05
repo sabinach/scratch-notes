@@ -1,7 +1,9 @@
+// Code from: https://www.d3-graph-gallery.com/graph/line_cursor.html
+
 // set the dimensions and margins of the graph
 var margin = {top: 10, right: 30, bottom: 30, left: 60},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+    width = 460,
+    height = 400;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -13,7 +15,7 @@ var svg = d3.select("#my_dataviz")
           "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/data_IC.csv",function(data) {
+d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/data_IC.csv", function(data) {
 
   // Add X axis --> it is a date format
   var x = d3.scaleLinear()
