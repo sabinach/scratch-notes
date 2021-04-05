@@ -2,12 +2,12 @@
 
 ### examples/
 
-From: [D3 Graph Gallery](https://www.d3-graph-gallery.com/interactivity.html)
+From: [D3 Graph Gallery](https://www.d3-graph-gallery.com/index.html) ([Interactivity](https://www.d3-graph-gallery.com/interactivity.html))
 - [Brush](https://www.d3-graph-gallery.com/graph/interactivity_brush.html)
 - [Line Graph (Basic)](https://www.d3-graph-gallery.com/graph/line_basic.html)
 - [Line Graph (Cursor)](https://www.d3-graph-gallery.com/graph/line_cursor.html)
 - [Line Graph (Nodes)](http://bl.ocks.org/romsson/f205420d21ced66810058d4cdf25c6dd)
-- [Line Graph (Tooltip)](https://observablehq.com/@d3/line-chart-with-tooltip)
+- [Line Graph (Tooltip)](https://bl.ocks.org/Qizly/8f6ba236b79d9bb03a80)
 - [Line Graph (Zoom)](https://www.d3-graph-gallery.com/graph/line_brushZoom.html)
 
 ### tutorial/
