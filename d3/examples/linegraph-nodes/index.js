@@ -44,7 +44,6 @@ d3.json("dataset.json", function(data) {
   x.domain(d3.extent(data, function(d) { return d.date; }));
   y.domain([0, d3.max(data, function(d) { return d.value; })]);
 
-  /*
   svg.selectAll("text").data(data).enter()
     .append("text")
     .attr("y", 420)
@@ -62,10 +61,7 @@ d3.json("dataset.json", function(data) {
     .style("font-size", 20)
     .style("font-family", "monospace")
     .text(function(d, i) { return d.value; });
-  */
-  
 
-  /*
   g.selectAll("circle").data(data).enter()
     .append("circle")
     .attr("cx", function(d) { return x(d.date); })
@@ -100,12 +96,6 @@ d3.json("dataset.json", function(data) {
       g.selectAll("#tooltip").remove();
       g.selectAll("#tooltip_path").remove();
     });
-  */
-
-
-
-
-
 
   g.selectAll("path").data([data]).enter().append("path")
     .attr("class", "line")
