@@ -44,8 +44,9 @@ d3.json("dataset.json", function(data) {
   x.domain(d3.extent(data, function(d) { return d.date; }));
   y.domain([0, d3.max(data, function(d) { return d.value; })]);
 
+  /*
   svg.selectAll("text").data(data).enter()
-   .append("text")
+    .append("text")
     .attr("y", 420)
     .attr("x", function(d) { return x(d.date); })
     .attr("id", "")
@@ -54,16 +55,19 @@ d3.json("dataset.json", function(data) {
     .text(function(d, i) { return d.date; });
 
   g.selectAll(".value").data([data[data.length -1]]).enter()
-   .append("text")
+    .append("text")
     .attr("class", "value")
     .attr("y", function(d) { return y(d.value); })
     .attr("x", width - 20)
     .style("font-size", 20)
     .style("font-family", "monospace")
     .text(function(d, i) { return d.value; });
+  */
   
+
+  /*
   g.selectAll("circle").data(data).enter()
-   .append("circle")
+    .append("circle")
     .attr("cx", function(d) { return x(d.date); })
     .attr("cy", function(d) { return y(d.value); })
     .attr("r", function(d, i) { return 5; })
@@ -96,15 +100,21 @@ d3.json("dataset.json", function(data) {
       g.selectAll("#tooltip").remove();
       g.selectAll("#tooltip_path").remove();
     });
+  */
 
-    g.selectAll("path").data([data]).enter().append("path")
-      .attr("class", "line")
-      .attr("d", line);
-  
-    svg.append("g")
-      .attr("class", "axis axis--x")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
+
+
+
+
+
+  g.selectAll("path").data([data]).enter().append("path")
+    .attr("class", "line")
+    .attr("d", line);
+
+  svg.append("g")
+    .attr("class", "axis axis--x")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x));
   
 
 });
