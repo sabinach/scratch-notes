@@ -1,123 +1,99 @@
-// Code from: https://bl.ocks.org/Qizly/8f6ba236b79d9bb03a80
+// Code from: https://www.d3-graph-gallery.com/graph/connectedscatter_tooltip.html
 
-var margin = { top: 30, right: 120, bottom: 30, left: 50 },
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom,
-    tooltip = { width: 100, height: 100, x: 10, y: -30 };
+// set the dimensions and margins of the graph
+var margin = {top: 10, right: 30, bottom: 30, left: 60},
+    width = 460 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
 
-var parseDate = d3.time.format("%m/%e/%Y").parse,
-    bisectDate = d3.bisector(function(d) { return d.date; }).left,
-    formatValue = d3.format(","),
-    dateFormatter = d3.time.format("%m/%d/%y");
-
-var x = d3.time.scale()
-        .range([0, width]);
-
-var y = d3.scale.linear()
-        .range([height, 0]);
-
-var xAxis = d3.svg.axis()
-    .scale(x)
-    .orient("bottom")
-    .tickFormat(dateFormatter);
-
-var yAxis = d3.svg.axis()
-    .scale(y)
-    .orient("left")
-    .tickFormat(d3.format("s"))
-
-var line = d3.svg.line()
-    .x(function(d) { return x(d.date); })
-    .y(function(d) { return y(d.likes); });
-
-var svg = d3.select("body").append("svg")
+// append the svg object to the body of the page
+var svg = d3.select("#my_dataviz")
+  .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
 
-d3.tsv("data.tsv", function(error, data) {
-    if (error) throw error;
+//Read the data
+d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/connectedscatter.csv",
 
-    data.forEach(function(d) {
-        d.date = parseDate(d.date);
-        d.likes = +d.likes;
-    });
+  // When reading the csv, I must format variables:
+  function(d){
+    return { date : d3.timeParse("%Y-%m-%d")(d.date), value : d.value }
+  },
 
-    data.sort(function(a, b) {
-        return a.date - b.date;
-    });
+  // Now I can use this dataset:
+  function(data) {
 
-    x.domain([data[0].date, data[data.length - 1].date]);
-    y.domain(d3.extent(data, function(d) { return d.likes; }));
-
+    // Add X axis --> it is a date format
+    var x = d3.scaleTime()
+      .domain(d3.extent(data, function(d) { return d.date; }))
+      .range([ 0, width ]);
     svg.append("g")
-        .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(xAxis);
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
 
+    // Add Y axis
+    var y = d3.scaleLinear()
+      .domain( [8000, 9200])
+      .range([ height, 0 ]);
     svg.append("g")
-        .attr("class", "y axis")
-        .call(yAxis)
-        .append("text")
-        .attr("transform", "rotate(-90)")
-        .attr("y", 6)
-        .attr("dy", ".71em")
-        .style("text-anchor", "end")
-        .text("Number of Likes");
+      .call(d3.axisLeft(y));
 
+    // Add the line
     svg.append("path")
-        .datum(data)
-        .attr("class", "line")
-        .attr("d", line);
+      .datum(data)
+      .attr("fill", "none")
+      .attr("stroke", "black")
+      .attr("stroke-width", 1.5)
+      .attr("d", d3.line()
+        .curve(d3.curveBasis) // Just add that to have a curve instead of segments
+        .x(function(d) { return x(d.date) })
+        .y(function(d) { return y(d.value) })
+        )
 
-    var focus = svg.append("g")
-        .attr("class", "focus")
-        .style("display", "none");
+    // create a tooltip
+    var Tooltip = d3.select("#my_dataviz")
+      .append("div")
+      .style("opacity", 0)
+      .attr("class", "tooltip")
+      .style("background-color", "white")
+      .style("border", "solid")
+      .style("border-width", "2px")
+      .style("border-radius", "5px")
+      .style("padding", "5px")
 
-    focus.append("circle")
-        .attr("r", 5);
+      // Three function that change the tooltip when user hover / move / leave a cell
+      var mouseover = function(d) {
+        Tooltip
+          .style("opacity", 1)
+      }
+      var mousemove = function(d) {
+        Tooltip
+          .html("Exact value: " + d.value)
+          .style("left", (d3.mouse(this)[0]+70) + "px")
+          .style("top", (d3.mouse(this)[1]) + "px")
+      }
+      var mouseleave = function(d) {
+        Tooltip
+          .style("opacity", 0)
+      }
 
-    focus.append("rect")
-        .attr("class", "tooltip")
-        .attr("width", 100)
-        .attr("height", 50)
-        .attr("x", 10)
-        .attr("y", -22)
-        .attr("rx", 4)
-        .attr("ry", 4);
-
-    focus.append("text")
-        .attr("class", "tooltip-date")
-        .attr("x", 18)
-        .attr("y", -2);
-
-    focus.append("text")
-        .attr("x", 18)
-        .attr("y", 18)
-        .text("Likes:");
-
-    focus.append("text")
-        .attr("class", "tooltip-likes")
-        .attr("x", 60)
-        .attr("y", 18);
-
-    svg.append("rect")
-        .attr("class", "overlay")
-        .attr("width", width)
-        .attr("height", height)
-        .on("mouseover", function() { focus.style("display", null); })
-        .on("mouseout", function() { focus.style("display", "none"); })
-        .on("mousemove", mousemove);
-
-    function mousemove() {
-        var x0 = x.invert(d3.mouse(this)[0]),
-            i = bisectDate(data, x0, 1),
-            d0 = data[i - 1],
-            d1 = data[i],
-            d = x0 - d0.date > d1.date - x0 ? d1 : d0;
-        focus.attr("transform", "translate(" + x(d.date) + "," + y(d.likes) + ")");
-        focus.select(".tooltip-date").text(dateFormatter(d.date));
-        focus.select(".tooltip-likes").text(formatValue(d.likes));
-    }
-});
+    // Add the points
+    svg
+      .append("g")
+      .selectAll("dot")
+      .data(data)
+      .enter()
+      .append("circle")
+        .attr("class", "myCircle")
+        .attr("cx", function(d) { return x(d.date) } )
+        .attr("cy", function(d) { return y(d.value) } )
+        .attr("r", 8)
+        .attr("stroke", "#69b3a2")
+        .attr("stroke-width", 3)
+        .attr("fill", "white")
+        .on("mouseover", mouseover)
+        .on("mousemove", mousemove)
+        .on("mouseleave", mouseleave)
+})
