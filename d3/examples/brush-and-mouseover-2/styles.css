@@ -1,0 +1,12 @@
+  #tooltip {
+    height: 18px;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+  }
+  
+  body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
+  }
