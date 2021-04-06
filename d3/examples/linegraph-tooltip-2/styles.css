@@ -1,0 +1,47 @@
+body {
+  background-color: #F1F3F3;
+  font-family: 'Fira Sans', sans-serif;
+}
+  
+text {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #081F2C;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #D4D8DA;
+  stroke-width: 2px;
+  shape-rendering: crispEdges;
+}
+  
+.axis-title{
+  fill: #5B6770;
+  letter-spacing: 1px;
+}
+
+.line {
+  fill: none;
+  stroke: #6F257F;
+  stroke-width: 5px;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.focus circle {
+  fill: #F1F3F3;
+  stroke: #6F257F;
+  stroke-width: 5px;
+}
+  
+.hover-line {
+  stroke: #6F257F;
+  stroke-width: 2px;
+  stroke-dasharray: 2,4;
+}
