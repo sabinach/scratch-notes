@@ -12,6 +12,7 @@ From: [D3 Graph Gallery](https://www.d3-graph-gallery.com/index.html) ([Interact
 - [Line Graph (Nodes)](http://bl.ocks.org/romsson/f205420d21ced66810058d4cdf25c6dd)
 - [Line Graph (Tooltip)](https://bl.ocks.org/Qizly/8f6ba236b79d9bb03a80)
 - [Line Graph (Zoom)](https://www.d3-graph-gallery.com/graph/line_brushZoom.html)
+- [Scatter Plot (Tooltip)](https://www.d3-graph-gallery.com/graph/scatter_tooltip.html)
 
 ### tutorial/
 
