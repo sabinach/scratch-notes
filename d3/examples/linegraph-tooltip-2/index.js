@@ -54,7 +54,6 @@ d3.json("data.json", function(error, data) {
         .attr("class", "focus")
         .style("display", "none");
 
-    /*
     focus.append("line")
         .attr("class", "x-hover-line hover-line")
         .attr("y1", 0)
@@ -64,7 +63,6 @@ d3.json("data.json", function(error, data) {
         .attr("class", "y-hover-line hover-line")
         .attr("x1", width)
         .attr("x2", width);
-    */
 
     focus.append("circle")
         .attr("r", 6);
@@ -90,7 +88,7 @@ d3.json("data.json", function(error, data) {
           d = x0 - d0.year > d1.year - x0 ? d1 : d0;
       focus.attr("transform", "translate(" + x(d.year) + "," + y(d.value) + ")");
       focus.select("text").text(function() { return d.value; });
-      //focus.select(".x-hover-line").attr("y2", height - y(d.value));
-      //focus.select(".y-hover-line").attr("x2", width + width);
+      focus.select(".x-hover-line").attr("y2", height - y(d.value));
+      focus.select(".y-hover-line").attr("x2", width + width);
     }
 });
