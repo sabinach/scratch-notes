@@ -13,10 +13,15 @@ const svg = d3.select("#gradient-viz")
     .attr('height', height)
     .append('g')
     .attr('transform', 'translate(0, 0)');
+
 const line = d3.line()
-    .curve(d3.curveStep)
     .x(d => x(d.date))
     .y(d => y(d.value))
+
+const area = d3.area()
+	.x(d => x(d.date))
+	.y0(y(0))
+	.y1(d => y(d.value))
 
 
 d3.csv("FCM.csv", function(error, data) {
@@ -110,9 +115,11 @@ d3.csv("FCM.csv", function(error, data) {
 
 	svg.append('path')
 	    .datum(data)
-	    .attr("fill", "none")
 	  	.attr("stroke-width", 2)
+	  	.attr("fill", "none")
 	    .attr('d', line)
+	    //.attr("fill", "red")
+	    //.attr('d', area)
 	    .style("stroke", "url(#gradient)");
 
 	console.log(x(data[0].date)/width)
