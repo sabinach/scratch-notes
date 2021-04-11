@@ -5,6 +5,8 @@
 From: [D3 Graph Gallery](https://www.d3-graph-gallery.com/index.html) ([Interactivity](https://www.d3-graph-gallery.com/interactivity.html))
 - [Area Chart (Basic)](https://www.d3-graph-gallery.com/graph/area_basic.html)
 - [Area Chart (Hover)](https://medium.com/@louisemoxy/create-an-accurate-tooltip-for-a-d3-area-chart-bf59783f8a2d)
+- [Area Chart (Stacked)(https://www.d3-graph-gallery.com/graph/stackedarea_template.html)]
+- Area Chart (Stacked-Hover)
 - [Brush](https://www.d3-graph-gallery.com/graph/interactivity_brush.html)
 - [Brush and Mouseover 1](https://bl.ocks.org/mthh/99dc420cd7e276ecafe4ef4bf12c6927)
 - [Brush and Mouseover 2](https://jsfiddle.net/gerardofurtado/5ja2ssa1/)

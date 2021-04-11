@@ -89,11 +89,38 @@ d3.csv("FCM.csv", function(error, data) {
 
 	/* ---------------------------------------- */
 
+	// https://stackoverflow.com/questions/5560248/programmatically-lighten-or-darken-a-hex-color-or-rgb-and-blend-colors
+	function shadeColor(color, percent) {
 
-	const conditions = ["CLR", "FEW", "SCT", "BKN", "OVC", "VV "]
-	const colors = ["deepskyblue", "lightskyblue", "lightblue", "#aaaaaa", "#666666", "#666666"]
+	    var R = parseInt(color.substring(1,3),16);
+	    var G = parseInt(color.substring(3,5),16);
+	    var B = parseInt(color.substring(5,7),16);
+
+	    R = parseInt(R * (100 + percent) / 100);
+	    G = parseInt(G * (100 + percent) / 100);
+	    B = parseInt(B * (100 + percent) / 100);
+
+	    R = (R<255)?R:255;  
+	    G = (G<255)?G:255;  
+	    B = (B<255)?B:255;  
+
+	    var RR = ((R.toString(16).length==1)?"0"+R.toString(16):R.toString(16));
+	    var GG = ((G.toString(16).length==1)?"0"+G.toString(16):G.toString(16));
+	    var BB = ((B.toString(16).length==1)?"0"+B.toString(16):B.toString(16));
+
+	    return "#"+RR+GG+BB;
+	}
+
 	//const colors = d3.schemeCategory10.slice(0,6)
 	const getColor = (condition) => colors[conditions.indexOf(condition)];
+	const getDarkColor = (condition) => darkenedColors[conditions.indexOf(condition)];
+
+	const conditions = ["CLR", "FEW", "SCT", "BKN", "OVC", "VV "]
+	const colors = ["#3957ff", "#d3fe14", "#c9080a", "#fec7f8", "#0b7b3e", "#0bf0e9"]
+	const darkenedColors = colors.map(color => shadeColor(color, -20)) //+lighten, -darken
+
+	console.log("colors: ", colors)
+	console.log("darkenedColors: ", darkenedColors)
 
 	var defs = svg.append("defs");
 
@@ -108,22 +135,30 @@ d3.csv("FCM.csv", function(error, data) {
 	data.forEach((d, i) => {
 		// general area graph
 		if (i===0){
+			const startConditionPercent = data[0].condition //+ "-0"
+			const endConditionPercent = data[0].condition //+ "-" + Math.floor((x(data[i].date) / width)*100)
 			gradient.append("stop")
+				.attr("class", startConditionPercent)
 			    .attr("offset", "0%") // 0.00
 			    .attr("stop-color", getColor(data[0].condition));
 
 			gradient.append("stop")
+				.attr("class", endConditionPercent)
 			    .attr("offset", (x(data[i].date) / width)*100 + "%") // 0.04
 			    .attr("stop-color", getColor(data[0].condition));
 		}
 		else if (i!==0){
+			const startConditionPercent = data[i-1].condition //+ "-" + Math.floor((x(data[i-1].date) / width)*100)
+			const endConditionPercent = data[i-1].condition //+ "-" + Math.floor((x(data[i].date) / width)*100)
 			gradient.append("stop")
-			    .attr("offset", (x(data[i].date) / width)*100 + "%")
+				.attr("class", startConditionPercent)
+			    .attr("offset", (x(data[i-1].date) / width)*100 + "%")
 			    .attr("stop-color", getColor(data[i-1].condition));
 
 			gradient.append("stop")
+				.attr("class", endConditionPercent)
 			    .attr("offset", (x(data[i].date) / width)*100 + "%")
-			    .attr("stop-color", getColor(data[i].condition));
+			    .attr("stop-color", getColor(data[i-1].condition));
 		}
 
 		/*
@@ -154,12 +189,12 @@ d3.csv("FCM.csv", function(error, data) {
 
 	svg.append('path')
 	    .datum(data)
+	    .style("stroke", "url(#gradient)")
 	  	.attr("stroke-width", 2)
 	  	//.attr("fill", "none")
 	    //.attr('d', line)
 	    .attr("fill", "url(#gradient)")
 	    .attr('d', area)
-	    .style("stroke", "url(#gradient)")
 	    .on("mousemove", handleMouseMove)
 	    .on("mouseout", handleMouseOut)
 
@@ -188,12 +223,31 @@ d3.csv("FCM.csv", function(error, data) {
 			}
 		}
 
+
+
+
 		if (leftData && rightData){
 			// Update gradient
-			const x1Percentage = x(leftData.date) / width * 100;
-			const x2Percentage = x(rightData.date) / width * 100;
-			d3.selectAll(".start").attr("offset", `${x1Percentage}%`);
-			d3.selectAll(".end").attr("offset", `${x2Percentage}%`);
+			const x1Percentage = (x(leftData.date) / width) * 100;
+			const x2Percentage = (x(rightData.date) / width) * 100;
+
+			console.log(x1Percentage)
+			console.log(x2Percentage)
+
+			/*
+			gradient.selectAll("." + data[dataIndex - 1].condition + "-" + Math.floor(x1Percentage))
+			    .attr("offset", x1Percentage + "%")
+			    .attr("stop-color", getDarkColor(data[i-1].condition));
+
+			gradient.selectAll("." + data[dataIndex - 1].condition + "-" + Math.floor(x2Percentage))
+			    .attr("offset", x2Percentage + "%")
+			    .attr("stop-color", getDarkColor(data[i-1].condition));
+			*/
+
+			
+			d3.selectAll("."+data[dataIndex - 1].condition)
+				.attr("stop-color", darkenedColors[conditions.indexOf(data[dataIndex - 1].condition)]);
+			
 		}
 	}
 
