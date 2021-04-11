@@ -16,7 +16,7 @@ From: [D3 Graph Gallery](https://www.d3-graph-gallery.com/index.html) ([Interact
 - [Line Graph (Cursor)](https://www.d3-graph-gallery.com/graph/line_cursor.html)
 - [Line Graph (Gradient-1) (v3)](https://bl.ocks.org/mbostock/3970883)
 - [Line Graph (Gradient-2) (v3)](https://stackoverflow.com/questions/43635757/drawing-a-line-with-two-different-colors-using-d3)
-- [Line Graph (Gradient-3)](https://observablehq.com/@d3/variable-color-line)
+- [Line Graph (Gradient-3 (v6 -> v4))](https://observablehq.com/@d3/variable-color-line)
 - Line Graph (Gradient-Hover)
 - [Line Graph (Nodes)](http://bl.ocks.org/romsson/f205420d21ced66810058d4cdf25c6dd)
 - [Line Graph (Tooltip-1)](https://www.d3-graph-gallery.com/graph/connectedscatter_tooltip.html)
@@ -34,7 +34,6 @@ From: [D3 Graph Gallery](https://www.d3-graph-gallery.com/index.html) ([Interact
 ### tutorial/
 
 - Tutorial: https://www.tutorialsteacher.com/d3js       
-
 - Data loading requires local server. Use Brackets or run local server via: ```cd [folder]; http-server ./```
 
 ### template/
