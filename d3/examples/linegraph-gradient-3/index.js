@@ -103,22 +103,24 @@ d3.csv("FCM.csv", function(error, data) {
 	    .attr("offset", "0%")
 	    .attr("stop-color", getColor(data[0].condition));
 
-	for (var i = 1; i < data.length; i++) {
-		gradient.append("stop")
-		    .attr("offset", (x(data[i].date) / width)*100 + "%")
-		    .attr("stop-color", getColor(data[i-1].condition));
+	data.forEach((d, i) => {
+		if (i!==0){
+			gradient.append("stop")
+			    .attr("offset", (x(data[i].date) / width)*100 + "%")
+			    .attr("stop-color", getColor(data[i-1].condition));
 
-		gradient.append("stop")
-		    .attr("offset", (x(data[i].date) / width)*100 + "%")
-		    .attr("stop-color", getColor(data[i].condition));
-	}
+			gradient.append("stop")
+			    .attr("offset", (x(data[i].date) / width)*100 + "%")
+			    .attr("stop-color", getColor(data[i].condition));
+		}
+	})
 
 	svg.append('path')
 	    .datum(data)
 	  	.attr("stroke-width", 2)
 	  	.attr("fill", "none")
 	    .attr('d', line)
-	    //.attr("fill", "red")
+	    //.attr("fill", "url(#gradient)")
 	    //.attr('d', area)
 	    .style("stroke", "url(#gradient)");
 
