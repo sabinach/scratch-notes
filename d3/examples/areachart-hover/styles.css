@@ -1,0 +1,18 @@
+#chart {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.selection {
+  fill: none;
+}
+
+.tooltip {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  margin: 0 auto;
+  color: teal;
+  font-size: 20px;
+}

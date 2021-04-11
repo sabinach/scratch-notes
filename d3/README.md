@@ -3,6 +3,8 @@
 ### examples/
 
 From: [D3 Graph Gallery](https://www.d3-graph-gallery.com/index.html) ([Interactivity](https://www.d3-graph-gallery.com/interactivity.html))
+- [Area Chart (Basic)](https://www.d3-graph-gallery.com/graph/area_basic.html)
+- [Area Chart (Hover)](https://medium.com/@louisemoxy/create-an-accurate-tooltip-for-a-d3-area-chart-bf59783f8a2d)
 - [Brush](https://www.d3-graph-gallery.com/graph/interactivity_brush.html)
 - [Brush and Mouseover 1](https://bl.ocks.org/mthh/99dc420cd7e276ecafe4ef4bf12c6927)
 - [Brush and Mouseover 2](https://jsfiddle.net/gerardofurtado/5ja2ssa1/)
@@ -12,6 +14,9 @@ From: [D3 Graph Gallery](https://www.d3-graph-gallery.com/index.html) ([Interact
 - [Line Graph (Basic-1)](https://www.d3-graph-gallery.com/graph/line_basic.html)
 - [Line Graph (Basic-2)](https://bl.ocks.org/d3noob/402dd382a51a4f6eea487f9a35566de0)
 - [Line Graph (Cursor)](https://www.d3-graph-gallery.com/graph/line_cursor.html)
+- [Line Graph (Gradient-1) (v3)](https://bl.ocks.org/mbostock/3970883)
+- [Line Graph (Gradient-2) (v3)](https://stackoverflow.com/questions/43635757/drawing-a-line-with-two-different-colors-using-d3)
+- [Line Graph (Gradient-2) (v6)](https://observablehq.com/@d3/variable-color-line)
 - [Line Graph (Nodes)](http://bl.ocks.org/romsson/f205420d21ced66810058d4cdf25c6dd)
 - [Line Graph (Tooltip-1)](https://www.d3-graph-gallery.com/graph/connectedscatter_tooltip.html)
 - [Line Graph (Tooltip-2)](https://blockbuilder.org/cse4qf/b3281253ff771535e5e29196144dfb33)
