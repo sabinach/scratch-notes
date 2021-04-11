@@ -103,12 +103,20 @@ d3.csv("FCM.csv", function(error, data) {
 	    .attr("x1", "0%")
 	    .attr("x2", "100%");
 
-	gradient.append("stop")
-	    .attr("offset", "0%")
-	    .attr("stop-color", getColor(data[0].condition));
+	const gradientResetPercentage = "50%";
 
 	data.forEach((d, i) => {
-		if (i!==0){
+		// general area graph
+		if (i===0){
+			gradient.append("stop")
+			    .attr("offset", "0%") // 0.00
+			    .attr("stop-color", getColor(data[0].condition));
+
+			gradient.append("stop")
+			    .attr("offset", (x(data[i].date) / width)*100 + "%") // 0.04
+			    .attr("stop-color", getColor(data[0].condition));
+		}
+		else if (i!==0){
 			gradient.append("stop")
 			    .attr("offset", (x(data[i].date) / width)*100 + "%")
 			    .attr("stop-color", getColor(data[i-1].condition));
@@ -117,6 +125,30 @@ d3.csv("FCM.csv", function(error, data) {
 			    .attr("offset", (x(data[i].date) / width)*100 + "%")
 			    .attr("stop-color", getColor(data[i].condition));
 		}
+
+		/*
+		gradient
+		  .append("stop")
+		  .attr("class", "start")
+		  .attr("offset", (x(data[i].date) / width)*100 + "%")
+		  .attr("stop-color", getColor(data[i-1].condition));
+		gradient
+		  .append("stop")
+		  .attr("class", "start")
+		  .attr("offset", (x(data[i].date) / width)*100 + "%")
+		  .attr("stop-color", "red");
+		gradient
+		  .append("stop")
+		  .attr("class", "end")
+		  .attr("offset", (x(data[i].date) / width)*100 + "%")
+		  .attr("stop-color", "red")
+		  .attr("stop-opacity", 1);
+		gradient
+		  .append("stop")
+		  .attr("class", "end")
+		  .attr("offset", (x(data[i].date) / width)*100 + "%")
+		  .attr("stop-color", getColor(data[i].condition));
+		*/
 	})
 		
 
@@ -131,10 +163,8 @@ d3.csv("FCM.csv", function(error, data) {
 	    .on("mousemove", handleMouseMove)
 	    .on("mouseout", handleMouseOut)
 
-	console.log(x(data[0].date)/width)
-	console.log(getColor(data[0].condition))
-	console.log(x(data[100].date)/width)
-	console.log(getColor(data[100].condition))
+
+
 
 	const bisectDate = d3.bisector(d => d.date).left;
 
@@ -158,19 +188,23 @@ d3.csv("FCM.csv", function(error, data) {
 			}
 		}
 
-		// Update gradient
-		const x1Percentage = x(leftData.date) / width * 100;
-		const x2Percentage = x(rightData.date) / width * 100;
-		d3.selectAll(".start").attr("offset", `${x1Percentage}%`);
-		d3.selectAll(".end").attr("offset", `${x2Percentage}%`);
+		if (leftData && rightData){
+			// Update gradient
+			const x1Percentage = x(leftData.date) / width * 100;
+			const x2Percentage = x(rightData.date) / width * 100;
+			d3.selectAll(".start").attr("offset", `${x1Percentage}%`);
+			d3.selectAll(".end").attr("offset", `${x2Percentage}%`);
+		}
 	}
 
-	const gradientResetPercentage = "50%";
 	function handleMouseOut() {
 		console.log("mouseOut");
 
 		d3.selectAll(".start").attr("offset", gradientResetPercentage);
 		d3.selectAll(".end").attr("offset", gradientResetPercentage);
 	}
+
+
+
 
 })
