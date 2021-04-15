@@ -40,10 +40,8 @@ const mouseover_piechart = function(d){
     svg.selectAll(".pieSlice").style("opacity", lowOpacity)
     svg.selectAll(".pieText").style("opacity", lowOpacity)
     // expect the one that is hovered
-    if(d.index){
-      svg.selectAll(".pieSlice-" + d.index).style("opacity", highOpacity)
-      svg.selectAll(".pieText-" + d.index).style("opacity", highOpacity)
-    }
+    svg.selectAll(".pieSlice-" + d.index).style("opacity", highOpacity)
+    svg.selectAll(".pieText-" + d.index).style("opacity", highOpacity)
   }
 }
 
