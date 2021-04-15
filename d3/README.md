@@ -27,6 +27,7 @@ From: [D3 Graph Gallery](https://www.d3-graph-gallery.com/index.html) ([Interact
 - [Scatter Plot (Tooltip)](https://www.d3-graph-gallery.com/graph/scatter_tooltip.html)
 - [Pie Chart (Annotated)](https://www.d3-graph-gallery.com/graph/pie_annotation.html)
 - [Pie Chart (Basic)](https://www.d3-graph-gallery.com/graph/pie_basic.html)
+- Pie Chart (Hover)
 - [Scatter Plot (Tooltip)](https://www.d3-graph-gallery.com/graph/scatter_tooltip.html)
 - [Treemap (Basic-csv)](https://www.d3-graph-gallery.com/graph/treemap_basic.html)
 - [Treemap (Basic-json)](https://www.d3-graph-gallery.com/graph/treemap_json.html)
