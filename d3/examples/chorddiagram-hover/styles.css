@@ -1,0 +1,22 @@
+#visual {
+    font: 14px sans-serif;
+}
+
+.chord path {
+    fill-opacity: .67;
+    stroke: #000;
+    stroke-width: 0px;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+    #visual {
+        -webkit-user-select: none;
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    #visual { 
+        -webkit-user-select: none; 
+    }
+}
