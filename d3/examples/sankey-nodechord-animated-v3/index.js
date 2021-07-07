@@ -125,7 +125,7 @@
   };
 
   list_links(graph_data);
-
+  
   sankey = function(graph) {
     return graph.nodes.forEach(function(n) {
       var acc;
@@ -150,6 +150,8 @@
   };
 
   sankey(graph_data);
+
+  console.log(graph_data)
 
   compute_degree = function(graph) {
     return graph.nodes.forEach(function(n) {

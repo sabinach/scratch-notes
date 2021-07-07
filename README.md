@@ -6,6 +6,7 @@
 * C++ [In Progress]
 * D3
 * Java [In Progress]
+* Jekyll
 * Julia
 * Processing
 * Python

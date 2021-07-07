@@ -31,6 +31,7 @@ From: [D3 Graph Gallery](https://www.d3-graph-gallery.com/index.html) ([Interact
 - [Sankey Chord Diagram (Node - Animated) (v3)](http://bl.ocks.org/nitaku/1adb4033d7078f7d005e)
 - [Sankey Chord Diagram (Node - Slider) (v3)](http://bl.ocks.org/nitaku/a50ccec1c202731fa8f1)
 - [Scatter Plot (Tooltip)](https://www.d3-graph-gallery.com/graph/scatter_tooltip.html)
+- [Slider (Basic) (v3)](https://gist.github.com/shancarter/5979700#file-index-html)
 - [Pie Chart (Annotated)](https://www.d3-graph-gallery.com/graph/pie_annotation.html)
 - [Pie Chart (Basic)](https://www.d3-graph-gallery.com/graph/pie_basic.html)
 - Pie Chart (Hover)
