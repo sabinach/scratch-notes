@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Metadata -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Sabina Chen - Portfolio" />
+        <meta name="author" content="Sabina Chen" />
+        <!-- Browser Tab -->
+        <title>Sabina Chen - Portfolio</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/general/favicon.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="style.css" rel="stylesheet" />
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-R1MR6S6E1P"></script>
+        <script type="text/javascript" src="js/analytics.js"></script>
+    </head>
+    
+    <body id="page-top">
+        <!-- Side Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+			<a class="navbar-brand js-scroll-trigger" href="index.html">
+				<span class="d-block d-lg-none">Sabina Chen</span>
+				<span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/general/profile.jpg" alt="" /></span>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav">
+					<!-- Name -->
+					<div class="d-none d-lg-inline">
+						<h3 class="navbar-name">Sabina Chen</h3>
+					</div>
+					<!-- Section Names -->
+					<li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+					<li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+					<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+				</ul> 
+			</div>
+			<div class="collapse navbar-collapse-icons social-icons">
+				<a class="social-icon" target="_blank" href="https://www.youtube.com/channel/UCgqnUkB9lDFPpJ39MhWsvkg"><i class="fab fa-youtube"></i></a>
+				<a class="social-icon" target="_blank" href="https://www.linkedin.com/in/sabinachen/"><i class="fab fa-linkedin-in"></i></a>
+				<a class="social-icon" target="_blank" href="https://github.com/sabinach"><i class="fab fa-github"></i></a>
+			</div>
+		</nav>
+        
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Sabina
+                        <span class="text-primary">Chen</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        Dreamer · Creator · Maker
+                    </div>
+                    <p class="lead mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </section>
+            <!-- End of About -->
+
+            <!-- Footer -->
+			<footer>
+                <div class="text-center py-3">
+                    &copy; <span id="copyright_year"></span>
+                    <script type="text/javascript">$("#copyright_year").text(new Date().getFullYear().toString());</script>
+                    Sabina Chen
+                    <a href="http://harlemify.com/?url=sabinachen.com%2Fprojects.html" target="_blank"><i class="fa fa-heart"></i></a> <!-- TODO: update the url -->
+                    (╯ ･ ᗜ ･ )╯︵ ┻━┻
+                    <br>
+                    Powered by <a href="https://startbootstrap.com/" target="_blank">Start Bootstrap LLC</a> (with some modifications from Sabina!)
+                </div>
+            </footer>
+            
+        </div>
+        <!-- End of Page Content -->
+		
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    </body>
+</html>

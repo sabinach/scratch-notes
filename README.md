@@ -10,6 +10,7 @@
 * Julia
 * Processing
 * Python
+* SHTML
 * React
 * Vue
 

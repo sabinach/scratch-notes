@@ -1,0 +1,18 @@
+<!--#include file="includes/header.shtml" -->		
+<section class="resume-section" id="about">
+	<div class="resume-section-content">
+		
+		<h1 class="mb-0">
+			Sabina
+			<span class="text-primary">Chen</span>
+		</h1>
+		<div class="subheading mb-5">
+			Dreamer · Creator · Maker
+		</div>
+		<p class="lead mb-5">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		
+	</div>
+</section>	
+<!--#include file="includes/footer.shtml" -->

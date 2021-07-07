@@ -1,0 +1,11 @@
+<footer>
+	<div class="text-center py-3">
+		&copy; <span id="copyright_year"></span>
+		<script type="text/javascript">$("#copyright_year").text(new Date().getFullYear().toString());</script>
+		Sabina Chen
+		<a href="http://harlemify.com/?url=sabinachen.com%2Fprojects.html" target="_blank"><i class="fa fa-heart"></i></a> <!-- TODO: update the url -->
+		(╯ ･ ᗜ ･ )╯︵ ┻━┻
+		<br>
+		Powered by <a href="https://startbootstrap.com/" target="_blank">Start Bootstrap LLC</a> (with some modifications from Sabina!)
+	</div>
+</footer>

@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	
+	<head>
+		<!-- Metadata -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta name="description" content="Sabina Chen's Portfolio" />
+		<meta name="author" content="Sabina Chen" />
+		<!-- Set Base Path -->
+    	<base href="../">
+		<!-- Browser Tab -->
+		<title>Sabina Chen</title>
+		<link rel="icon" type="image/x-icon" href="assets/img/general/favicon.png" />
+		<!-- Font Awesome icons (free version)-->
+		<script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+		<!-- Google fonts-->
+		<link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+		<link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+		<!-- Custom styles (includes Bootstrap)-->
+		<link href="css/style.css" rel="stylesheet" />
+		<!-- Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-R1MR6S6E1P"></script>
+		<script type="text/javascript">
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "G-R1MR6S6E1P");
+		</script>
+	</head>
+    
+    <body id="page-top">
+        
+		<!--#include file="includes/navbar.shtml" -->	
+        
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+			
