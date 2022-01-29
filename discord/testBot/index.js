@@ -1,5 +1,10 @@
 const discord = require('discord.js')
+const tokens = require('./utils/tokens')
 
-const client = discord.Client()
+const client = new discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] }); 
 
-client.login('OTM2ODQzMDc5NDQ3NjEzNDUw.YfTFGw.d46cS9Y3Iq3kELTQOdyaxYgH4dE')
+client.once('ready', () => {
+  console.log('testBot is online!')
+})
+
+client.login(tokens.CLIENT_TOKEN)

@@ -10,3 +10,4 @@ node_modules/
 # private files
 db_config.js
 tokens.json
+tokens.js
