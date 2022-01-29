@@ -1,4 +1,4 @@
-# Random programming practice
+# CS Scratch Notes
 
 ### Languages
 * C++
