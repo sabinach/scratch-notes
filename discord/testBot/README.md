@@ -1,5 +1,9 @@
 # testBot
 
+### Specs
+- NodeJS
+- Discord.js
+
 ### Setup
 - Instructions: [Code Your Own Discord Bot - Basics 2021](https://youtu.be/j_sD9udZnCk) by CodeLyon
   * ```npm init```
@@ -9,16 +13,16 @@
 - ```node index.js```
 
 ### Functionalities
-- Command Handlers [[video](XXX)]
-- Permissions & Roles [[video](XXX)]
-- Embeds [[video](XXX)]
-- Clear Messages [[video](XXX)]
-- Kick & Ban Commands [[video](XXX)]
-- Mute & Timed Mute [[video](XXX)]
-- Join Role & Message [[video](XXX)]
-- Reaction Roles [[video](XXX)]
-- Member Counter [[video](XXX)]
-- Music Bot [[video](XXX)]
-- Google Image Scraper [[video](XXX)]
-- Aliases [[video](XXX)]
-- Cooldowns [[video](XXX)]
+- Command Handlers [[tutorial](XXX)]
+- Permissions & Roles [[tutorial](XXX)]
+- Embeds [[tutorial](XXX)]
+- Clear Messages [[tutorial](XXX)]
+- Kick & Ban Commands [[tutorial](XXX)]
+- Mute & Timed Mute [[tutorial](XXX)]
+- Join Role & Message [[tutorial](XXX)]
+- Reaction Roles [[tutorial](XXX)]
+- Member Counter [[tutorial](XXX)]
+- Music Bot [[tutorial](XXX)]
+- Google Image Scraper [[tutorial](XXX)]
+- Aliases [[tutorial](XXX)]
+- Cooldowns [[tutorial](XXX)]
