@@ -1,4 +1,4 @@
-# CS Scratch Notes
+# Programming Scratch Notes
 
 ### Languages
 * C++
