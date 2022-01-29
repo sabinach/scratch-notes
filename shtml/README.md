@@ -1,4 +1,4 @@
-# test-shtml (HTML w/ Server Side Includes)
+# shtml (HTML w/ Server Side Includes)
 
 ### Ways to run a local server
 
