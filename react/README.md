@@ -1,3 +1,5 @@
+# React
+
 ### Docs
 ```templates/``` - Stock template for future ```.js``` files         
 ```scattered_notes.txt``` - Random notes taken while following The Net Ninja tutorials

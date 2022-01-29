@@ -1,4 +1,4 @@
-# Julia Tutorial (1.4.2)
+# Julia (v1.4.2)
 
 ### Setup 
 MacOSX Setup (add to ~/.bash_profile):      

@@ -1,4 +1,4 @@
-# test-jekyll
+# Jekyll
 
 ### Set Up
 
