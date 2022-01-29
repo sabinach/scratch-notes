@@ -13,8 +13,8 @@
 
 ### API
 * Discord
-* Twitch
 * Google Sheets
+* Twitch
 
 ### Misc
 * Cron Jobs
