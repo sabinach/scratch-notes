@@ -1,11 +1,8 @@
 # Random programming practice
 
-### Languages / Libraries
-* Assembly [In Progress]
-* CMake [In Progress]
-* C++ [In Progress]
+### Languages
+* C++
 * D3
-* Java [In Progress]
 * Jekyll
 * Julia
 * Processing
@@ -14,6 +11,15 @@
 * React
 * Vue
 
-### Skills
+### API
+* Discord
+* Twitch
+* Google Sheets
+
+### Misc
+* Cron Jobs
 * Databases
+   - Firebase
+   - MySQL
 * Web Scraping
+   - NodeJS (Axios, Cheerio, Puppeteer)
