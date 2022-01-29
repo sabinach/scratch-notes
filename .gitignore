@@ -8,4 +8,5 @@ node_modules/
 #.env
 
 # private files
-creds.json
+db_config.js
+tokens.json

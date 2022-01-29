@@ -5,7 +5,7 @@ from pprint import pprint
 scope = ["https://spreadsheets.google.com/feeds","https://www.googleapis.com/auth/spreadsheets","https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
 
 # console.developer.google.com credentials - remember to share sheets with credential email
-creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json", scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name("tokens.json", scope)
 client = gspread.authorize(creds)
 
 # name of sheet to open
