@@ -31,10 +31,9 @@ client.on('messageCreate', message => {
   if(!message.content.startsWith(PREFIX) || message.author.bot) return;
 
   const args = message.content.slice(PREFIX.length).split(/ +/)
-  const command = args.shift().toLowerCase() // force command input to lowercase
+  const command = args.shift().toLowerCase() // pop first arg, force command input to lowercase
 
   if(client.commands.has(command)){
-    console.log("hi")
     client.commands.get(command).execute(message, args)
   }else{
     message.channel.send('Command not found.') 

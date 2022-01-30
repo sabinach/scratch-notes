@@ -10,3 +10,7 @@ node_modules/
 # private files
 db_config.js
 creds.json
+
+# temporary ignore
+schedule-bot/
+soundboard-bot/
