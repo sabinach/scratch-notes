@@ -8,8 +8,12 @@ module.exports = {
         if(message.member.roles.cache.has(roleId)){
           message.channel.send(`You already have the role ID: ${roleId}.`) 
         }else{
-          message.member.roles.add(roleId)
-          message.channel.send(`Added role ID: ${roleId}.`)
+          if (message.guild.roles.cache.get(roleId) === undefined){
+            message.channel.send(`No such role ID exists: ${roleId}.`) 
+          }else{
+            message.member.roles.add(roleId)
+            message.channel.send(`Added role ID: ${roleId}.`)
+          }
         }
       })
     }
