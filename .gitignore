@@ -5,9 +5,8 @@
 node_modules/
 
 # dotenv environment variables file
-#.env
+.env
 
 # private files
 db_config.js
-tokens.json
-tokens.js
+creds.json

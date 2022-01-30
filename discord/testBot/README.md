@@ -10,19 +10,22 @@
   * ```npm install discord.js``` (requires node version >16)
 
 ### To Run
+- ```npm ci```
 - ```node index.js```
 
 ### Functionalities
-- Command Handlers [[tutorial](XXX)]
-- Permissions & Roles [[tutorial](XXX)]
-- Embeds [[tutorial](XXX)]
-- Clear Messages [[tutorial](XXX)]
-- Kick & Ban Commands [[tutorial](XXX)]
-- Mute & Timed Mute [[tutorial](XXX)]
-- Join Role & Message [[tutorial](XXX)]
-- Reaction Roles [[tutorial](XXX)]
-- Member Counter [[tutorial](XXX)]
-- Music Bot [[tutorial](XXX)]
-- Google Image Scraper [[tutorial](XXX)]
-- Aliases [[tutorial](XXX)]
-- Cooldowns [[tutorial](XXX)]
+- Command Handlers [[video 1](https://youtu.be/nTGtiCC3iQM)] [[video 2](https://youtu.be/AUOb9_aAk7U)]
+- Permissions & Roles [[video](https://youtu.be/5BArCspxauI)]
+  * Permission Guides: https://discordjs.guide/popular-topics/permissions.html#roles-as-bot-permissions
+  * Permission Flags: https://discord.js.org/#/docs/main/stable/class/Permissions?scrollTo=s-FLAGS
+- Embeds [[video](XXX)]
+- Clear Messages [[video](XXX)]
+- Kick & Ban Commands [[video](XXX)]
+- Mute & Timed Mute [[video](XXX)]
+- Join Role & Message [[video](XXX)]
+- Reaction Roles [[video](XXX)]
+- Member Counter [[video](XXX)]
+- Music Bot [[video](XXX)]
+- Google Image Scraper [[video](XXX)]
+- Aliases [[video](XXX)]
+- Cooldowns [[video](XXX)]
