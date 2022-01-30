@@ -5,6 +5,7 @@
 - Discord.js
 
 ### Setup
+- Playlist: [Code Your Own Discord Bot 2021](https://www.youtube.com/playlist?list=PLbbLC0BLaGjpyzN1rg-gK4dUqbn8eJQq4) by CodeLyon
 - Instructions: [Code Your Own Discord Bot - Basics 2021](https://youtu.be/j_sD9udZnCk) by CodeLyon
   * ```npm init```
   * ```npm install discord.js``` (requires node version >16)

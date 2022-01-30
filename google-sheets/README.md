@@ -1,4 +1,4 @@
-# Google Sheets API
+# Google Sheets
 
-### Tutorial
+### API Tutorial
 - https://www.analyticsvidhya.com/blog/2020/07/read-and-update-google-spreadsheets-with-python/
