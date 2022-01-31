@@ -10,7 +10,7 @@ const PREFIX = '-'
 dotenv.config();
 
 // create new client instance
-const client = new discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] }); 
+const client = new discord.Client({ intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MEMBERS'] }); 
 client.commands = new discord.Collection()
 
 // initialize command list
@@ -24,6 +24,14 @@ files.forEach((file, i) => {
 // initialize client
 client.once('ready', () => {
   console.log('testBot is online!')
+  client.user.setActivity("With Bugs",{ type: "PLAYING" })
+})
+
+// new member joined
+client.on('guildMemberAdd', async guildMember => {
+  let memberRole = guildMember.guild.roles.cache.find(role => role.name === 'Member')
+  guildMember.roles.add(memberRole)
+  guildMember.guild.channels.cache.get(process.env.WELCOME_CHANNEL_ID).send(`Welcome <@${guildMember.user.id}> to the TestServer!`)
 })
 
 // message commands
