@@ -1,5 +1,7 @@
 # Programming Scratch Notes
 
+Miscellaneous code and notes taken when I am learning how to use new libraries. Saved here for future reference.
+
 ### Languages
 * C++
 * D3
