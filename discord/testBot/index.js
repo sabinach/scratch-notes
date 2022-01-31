@@ -47,7 +47,7 @@ client.on('messageCreate', message => {
   const args = message.content.slice(PREFIX.length).split(/ +/)
   const command = args.shift().toLowerCase() // pop first arg, force command input to lowercase
 
-  if(command === 'reactionrole'){
+  if(command === 'reactionrole'){ // TODO - make a less repetitive way to do this?
     client.commands.get(command).execute(message, args, client)
   }else if(client.commands.has(command)){
     client.commands.get(command).execute(message, args)
