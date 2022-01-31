@@ -30,8 +30,10 @@
     - https://emojipedia.org/
       * emoji name = shortcode ie. `:emojiName:`
       * emoji unicode = click COPY on the website
-- Member Counter [[video](XXX)]
-- Music Bot [[video](XXX)]
+- Member Counter [[video](https://youtu.be/Re20s6RVUb4)]
+  * Turn on `Presence Members Intent` and `Server Members Intent` on the [Discord Developers Portal](https://discord.com/developers/applications).
+  * There will be a delay. Member count will update when Discord updates its cache.
+- Music Bot [[video](https://youtu.be/3wJJDM7jUsk)]
 - Google Image Scraper [[video](XXX)]
 - Aliases [[video](XXX)]
 - Cooldowns [[video](XXX)]

@@ -2,6 +2,8 @@ const fs = require('fs')
 const discord = require('discord.js')
 const dotenv = require('dotenv')
 
+const memberCounter = require('./counters/memberCounter')
+
 // constants
 const COMMAND_DIR = './commands'
 const PREFIX = '-'
@@ -28,6 +30,7 @@ files.forEach((file, i) => {
 client.once('ready', () => {
   console.log('testBot is online!')
   client.user.setActivity("With Bugs",{ type: "PLAYING" })
+  memberCounter(client)
 })
 
 // new member joined
