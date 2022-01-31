@@ -1,7 +1,6 @@
 const fs = require('fs')
 const discord = require('discord.js')
 const dotenv = require('dotenv')
-
 const memberCounter = require('./counters/memberCounter')
 
 // constants

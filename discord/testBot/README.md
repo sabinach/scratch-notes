@@ -14,7 +14,7 @@
 
 ### Functionalities [[playlist](https://www.youtube.com/playlist?list=PLbbLC0BLaGjpyzN1rg-gK4dUqbn8eJQq4)]
 - Command Handlers [[video 1](https://youtu.be/nTGtiCC3iQM)] [[video 2](https://youtu.be/AUOb9_aAk7U)]
-- Permissions & Roles [[video 1](https://youtu.be/5BArCspxauI)] [[video 2](https://youtu.be/xpdIzcK3v3E)]
+- Permissions & Roles [[video](https://youtu.be/5BArCspxauI)]
   * Permission Guides: https://discordjs.guide/popular-topics/permissions.html#roles-as-bot-permissions
   * Permission Flags: https://discord.js.org/#/docs/main/stable/class/Permissions?scrollTo=s-FLAGS
 - Embeds [[video](https://youtu.be/I7eZY-SBmf8)]
@@ -37,8 +37,12 @@
 ### TODO
 - Aliases [[video](https://youtu.be/QBUJ3cdofqc)]
 - Cooldowns [[video](https://youtu.be/WGTZgZVVclw)]
+- Permissions [[video 2](https://youtu.be/xpdIzcK3v3E)]
 - YouTube Music Bot [[video 1](https://youtu.be/3wJJDM7jUsk)] [[video 2](https://youtu.be/riyHsgI2IDs)]
   * Commands: `-play`, `-pause`, `-resume`, `-queue`, `-skip`, `-clearQueue`, `-leave`
+  * Examples:
+    - https://github.com/reconlx/music-bot-v12
+    - https://github.com/reconlx/music-bot-v13
 - Buttons [[video](XXX)]
 - Google Image Scraper [[video](XXX)]
 - Suggestions [[video](XXX)]
