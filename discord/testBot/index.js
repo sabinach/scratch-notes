@@ -10,7 +10,10 @@ const PREFIX = '-'
 dotenv.config();
 
 // create new client instance
-const client = new discord.Client({ intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MEMBERS'] }); 
+const client = new discord.Client({ 
+  partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
+  intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MEMBERS', 'GUILD_MESSAGE_REACTIONS'] 
+}); 
 client.commands = new discord.Collection()
 
 // initialize command list
@@ -31,7 +34,7 @@ client.once('ready', () => {
 client.on('guildMemberAdd', async guildMember => {
   let memberRole = guildMember.guild.roles.cache.find(role => role.name === 'Member')
   guildMember.roles.add(memberRole)
-  guildMember.guild.channels.cache.get(process.env.WELCOME_CHANNEL_ID).send(`Welcome <@${guildMember.user.id}> to the TestServer!`)
+  guildMember.guild.channels.cache.get(process.env.WELCOME_CHANNEL_ID).send(`Welcome <@${guildMember.user.id}> to the TestServer! :raised_hands:`)
 })
 
 // message commands
@@ -41,7 +44,9 @@ client.on('messageCreate', message => {
   const args = message.content.slice(PREFIX.length).split(/ +/)
   const command = args.shift().toLowerCase() // pop first arg, force command input to lowercase
 
-  if(client.commands.has(command)){
+  if(command === 'reactionrole'){
+    client.commands.get(command).execute(message, args, client)
+  }else if(client.commands.has(command)){
     client.commands.get(command).execute(message, args)
   }else{
     message.channel.send('Command not found.') 

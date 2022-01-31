@@ -23,10 +23,13 @@
 - Kick & Ban Commands [[video](https://youtu.be/LFL5BWHurR4)]
 - Mute & Timed Mute [[video](https://youtu.be/PHGdIm7iHhI)]
 - Join Role & Message [[video](https://youtu.be/kjw6Hl-ZYIE)]
-  * In order for the ``addGuildMember()` event to work on new member join:
+  * In order for the `addGuildMember()` event to work on new member join:
     - Include: `const client = new discord.Client({ intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MEMBERS'] }); `
-    - Turn on `Server Members Intent` on the Discord Developers Portal.
-- Reaction Roles [[video](XXX)]
+    - Turn on `Server Members Intent` on the [Discord Developers Portal](https://discord.com/developers/applications).
+- Reaction Roles [[video](https://youtu.be/wXjsCiUjUqo)]
+    - https://emojipedia.org/
+      * emoji name = shortcode ie. `:emojiName:`
+      * emoji unicode = click COPY on the website
 - Member Counter [[video](XXX)]
 - Music Bot [[video](XXX)]
 - Google Image Scraper [[video](XXX)]

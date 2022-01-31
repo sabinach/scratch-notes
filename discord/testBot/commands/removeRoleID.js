@@ -9,10 +9,10 @@ module.exports = {
           message.member.roles.remove(roleId)
           message.channel.send(`Removed role ID: ${roleId}.`)
         }else{
-          if (message.guild.roles.cache.get(roleId) === undefined){
-            message.channel.send(`No such role ID exists: ${roleId}.`) 
+          if (message.guild.roles.cache.get(roleId)){
+            message.channel.send(`You already don't have the role ID: ${roleId}.`)
           }else{
-            message.channel.send(`You already don't have the role ID: ${roleId}.`) 
+            message.channel.send(`No such role ID exists: ${roleId}.`) 
           }
         }
       })
