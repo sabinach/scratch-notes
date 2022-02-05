@@ -11,7 +11,7 @@
 
 ### To Run
 - ```npm ci```
-- ```node index.js```
+- ```node index.js``` or ```npm run dev``` (for nodemon)
 
 ### Functionalities [[playlist](https://www.youtube.com/playlist?list=PLbbLC0BLaGjpyzN1rg-gK4dUqbn8eJQq4)]
 - Command Handlers [[video 1](https://youtu.be/nTGtiCC3iQM)] [[video 2](https://youtu.be/AUOb9_aAk7U)]
@@ -34,8 +34,10 @@
 - Member Counter [[video](https://youtu.be/Re20s6RVUb4)]
   * Turn on `Presence Members Intent` and `Server Members Intent` on the [Discord Developers Portal](https://discord.com/developers/applications).
   * There will be a delay. Member count will update when Discord updates its cache.
+- Buttons [[video](https://www.youtube.com/watch?v=e3EYsrasPms)]
 
 ### TODO
+- Slash Commands [[video 1](https://youtu.be/EN7LH89TUN4)] [[video 2](https://youtu.be/o6YWbnvncQE)]
 - Aliases [[video](https://youtu.be/QBUJ3cdofqc)]
 - Cooldowns [[video](https://youtu.be/WGTZgZVVclw)]
 - Permissions [[video 2](https://youtu.be/xpdIzcK3v3E)]
@@ -44,7 +46,6 @@
   * Examples:
     - https://github.com/reconlx/music-bot-v12
     - https://github.com/reconlx/music-bot-v13
-- Buttons [[video](XXX)]
 - Google Image Scraper [[video](XXX)]
 - Suggestions [[video](XXX)]
 - MongoDB [[video](XXX)]

@@ -3,7 +3,7 @@ const dotenv = require('dotenv')
 
 module.exports = {
   description: 'Sets up a reaction role message.',
-  async execute(message, args, client){
+  run: async (message, args, client) => {
     const rolesChannelId = process.env.ROLES_CHANNEL_ID
     const rolesChannel = message.member.guild.channels.cache.get(rolesChannelId)
     const roleA = message.guild.roles.cache.find(role => role.name === "Team A")

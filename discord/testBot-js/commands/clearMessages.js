@@ -1,6 +1,6 @@
 module.exports = {
   description: 'Clears messages (includes command itself).',
-  async execute(message, args){
+  run: async (message, args) => {
     MAX_CLEAR = 5
     if(args.length===0){
       message.channel.send("Please enter the number of messages that you want to clear.")

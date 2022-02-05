@@ -1,6 +1,6 @@
 module.exports = {
   description: 'Adds desired role IDs to user.',
-  execute(message, args){
+  run: (message, args) => {
     if (args.length === 0){
       message.channel.send('Please include at least one role ID to add.') 
     }else{

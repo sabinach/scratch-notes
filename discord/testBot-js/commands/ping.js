@@ -1,6 +1,6 @@
 module.exports = {
   description: 'Returns \'pong!\'.',
-  execute(message, args){
+  run: (message, args) => {
     message.channel.send('pong!')
   }
 }

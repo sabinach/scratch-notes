@@ -1,11 +1,11 @@
 const fs = require('fs')
-const discord = require('discord.js')
+const { Client, Intents, Collection } = require('discord.js');
 const dotenv = require('dotenv')
 const memberCounter = require('./counters/memberCounter')
 
 // constants
 const COMMAND_DIR = './commands'
-const PREFIX = '-'
+const PREFIX = '~'
 
 // load in .env file
 dotenv.config();
@@ -14,7 +14,7 @@ dotenv.config();
 console.log('Bot is starting...')
 
 // create new client instance
-const client = new discord.Client({ 
+const client = new Client({ 
   partials: [
     'MESSAGE', 
     'CHANNEL', 
@@ -27,7 +27,7 @@ const client = new discord.Client({
     Intents.FLAGS.GUILD_MESSAGE_REACTIONS
   ] 
 }); 
-client.commands = new discord.Collection()
+client.commands = new Collection()
 
 // initialize command list
 const files = fs.readdirSync(COMMAND_DIR).filter(file => file.endsWith('.js'))
@@ -59,12 +59,18 @@ client.on('messageCreate', message => {
   const command = args.shift().toLowerCase() // pop first arg, force command input to lowercase
 
   if(command === 'reactionrole'){ // TODO - make a less repetitive way to do this?
-    client.commands.get(command).execute(message, args, client)
+    client.commands.get(command).run(message, args, client)
   }else if(client.commands.has(command)){
-    client.commands.get(command).execute(message, args)
+    client.commands.get(command).run(message, args)
   }else{
     message.channel.send('Command not found.') 
   }
+})
+
+// interaction commands
+client.on('interactionCreate', async(interaction) => {
+  if(!interaction.isCommand()) return;
+  console.log('interactionCreate')
 })
 
 // login to bot

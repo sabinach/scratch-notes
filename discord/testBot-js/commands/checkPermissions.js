@@ -2,7 +2,7 @@ const { Permissions } = require('discord.js');
 
 module.exports = {
   description: 'Check if user has the desired permission.',
-  execute(message, args){
+  run: (message, args) => {
     if (args.length === 0){
       message.channel.send('Please include at least one permission flag.') 
     }else{

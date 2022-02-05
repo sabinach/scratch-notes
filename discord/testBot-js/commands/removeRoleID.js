@@ -1,6 +1,6 @@
 module.exports = {
   description: 'Removes desired role IDs from user.',
-  execute(message, args){
+  run: (message, args) => {
     if (args.length === 0){
       message.channel.send('Please include at least one role ID to remove.') 
     }else{

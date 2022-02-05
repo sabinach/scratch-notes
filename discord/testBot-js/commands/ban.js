@@ -2,7 +2,7 @@ const { Permissions } = require('discord.js');
 
 module.exports = {
   description: 'Ban user.',
-  execute(message, args){
+  run: (message, args) => {
     if(message.mentions.users.size==0){
       message.channel.send("Please mention a valid @user to ban.")
     }else{

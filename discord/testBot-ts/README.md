@@ -14,4 +14,4 @@
 - ```npm run start``` or ```npm run dev``` (for nodemon)
 
 ### Tutorial
-- https://sabe.io/tutorials/how-to-build-discord-bot-typescript
+- https://sabe.io/tutorials/how-to-build-discord-bot-typescript (create slash command)
