@@ -69,8 +69,22 @@ client.on('messageCreate', message => {
 
 // interaction commands
 client.on('interactionCreate', async(interaction) => {
-  if(!interaction.isCommand()) return;
-  console.log('interactionCreate')
+  if(interaction.isButton()){
+    console.log('interactionCreate Button')
+    if(interaction.customId === "primaryID-button"){
+      interaction.reply({
+        content: "You clicked the primary button."
+      })
+    }else if (interaction.customId === "secondary-button"){
+      interaction.reply({
+        content: "You clicked the secondary button."
+      })
+    }else{
+      return interaction.reply({
+        content: "You clicked the wrong button."
+      })
+    }
+  }
 })
 
 // login to bot

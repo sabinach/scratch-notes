@@ -12,7 +12,4 @@
 - Basic discord bot via JavaScript
 
 ### testBot-ts/
-- Baisc discord bot via TypeScript
-
-### musicBot/
-- Discord music bot via TypeScript
+- Basic discord bot via TypeScript
