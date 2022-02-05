@@ -1,12 +1,13 @@
-# testBot
+# testBot-js
 
 ### Specs
 - NodeJS
 - Discord.js
+- JavaScript
 
 ### Setup [[video](https://youtu.be/j_sD9udZnCk)]
 - ```npm init```
-- ```npm install discord.js``` (requires node version >16)
+- ```npm install discord.js dotenv``` (discord.js requires node version >16)
 
 ### To Run
 - ```npm ci```

@@ -10,10 +10,22 @@ const PREFIX = '-'
 // load in .env file
 dotenv.config();
 
+// initialize bot
+console.log('Bot is starting...')
+
 // create new client instance
 const client = new discord.Client({ 
-  partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
-  intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MEMBERS', 'GUILD_MESSAGE_REACTIONS'] 
+  partials: [
+    'MESSAGE', 
+    'CHANNEL', 
+    'REACTION'
+  ],
+  intents: [
+    Intents.FLAGS.GUILDS, 
+    Intents.FLAGS.GUILD_MESSAGES, 
+    Intents.FLAGS.GUILD_MEMBERS, 
+    Intents.FLAGS.GUILD_MESSAGE_REACTIONS
+  ] 
 }); 
 client.commands = new discord.Collection()
 
@@ -27,7 +39,7 @@ files.forEach((file, i) => {
 
 // initialize client
 client.once('ready', () => {
-  console.log('testBot is online!')
+  console.log(`${client.user.username} is online.`)
   client.user.setActivity("With Bugs",{ type: "PLAYING" })
   memberCounter(client)
 })
@@ -55,5 +67,5 @@ client.on('messageCreate', message => {
   }
 })
 
-// start bot
-client.login(process.env.CLIENT_TOKEN)
+// login to bot
+client.login(process.env.TOKEN)

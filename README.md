@@ -16,7 +16,6 @@ Miscellaneous code and notes taken when I am learning how to use new libraries. 
 ### API
 * Discord
 * Google Sheets
-* Twitch
 
 ### Misc
 * Cron Jobs
