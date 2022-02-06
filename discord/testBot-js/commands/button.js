@@ -29,7 +29,7 @@ module.exports = {
         .setStyle('DANGER')
         .setDisabled(false),
       new MessageButton()
-        .setLabel('github-button')
+        .setLabel('github')
         .setURL('https://github.com/sabinach/scratch-notes/tree/master/discord/testBot-js')
         .setStyle('LINK')
     )
