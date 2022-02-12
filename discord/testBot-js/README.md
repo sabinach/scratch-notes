@@ -46,7 +46,7 @@
   * Examples:
     - https://github.com/reconlx/music-bot-v12
     - https://github.com/reconlx/music-bot-v13
-- Google Image Scraper [[video](XXX)]
-- Suggestions [[video](XXX)]
-- MongoDB [[video](XXX)]
-- Apache Cassandra [[video](XXX)]
+- Google Image Scraper [[video](https://youtu.be/GYUc46XPlEI)]
+- Suggestions [[video](https://youtu.be/fGUms6htV80)]
+- MongoDB [[video](https://youtu.be/8no3SktqagY)]
+- Apache Cassandra [[video](https://youtu.be/86olupkuLlU)]
