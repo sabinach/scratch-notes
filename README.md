@@ -3,6 +3,7 @@
 Miscellaneous code and notes taken when I am learning how to use new libraries. Saved here for future reference.
 
 ### Languages
+* Bash
 * C++
 * D3
 * Jekyll
