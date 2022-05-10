@@ -1,0 +1,5 @@
+add_test([=[FibTest.NonNegativeValues]=]  /Users/sabinach/Desktop/temp/Sites/scratch-notes/cpp/examples/gtest/build/test_fib [==[--gtest_filter=FibTest.NonNegativeValues]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[FibTest.NonNegativeValues]=]  PROPERTIES WORKING_DIRECTORY /Users/sabinach/Desktop/temp/Sites/scratch-notes/cpp/examples/gtest/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[FibTest.NegativeValues]=]  /Users/sabinach/Desktop/temp/Sites/scratch-notes/cpp/examples/gtest/build/test_fib [==[--gtest_filter=FibTest.NegativeValues]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[FibTest.NegativeValues]=]  PROPERTIES WORKING_DIRECTORY /Users/sabinach/Desktop/temp/Sites/scratch-notes/cpp/examples/gtest/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  test_fib_TESTS FibTest.NonNegativeValues FibTest.NegativeValues)

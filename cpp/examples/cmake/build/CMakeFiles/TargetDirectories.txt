@@ -1,0 +1,3 @@
+/Users/sabinach/Desktop/temp/Sites/scratch-notes/cpp/examples/cmake/build/CMakeFiles/main.dir
+/Users/sabinach/Desktop/temp/Sites/scratch-notes/cpp/examples/cmake/build/CMakeFiles/edit_cache.dir
+/Users/sabinach/Desktop/temp/Sites/scratch-notes/cpp/examples/cmake/build/CMakeFiles/rebuild_cache.dir

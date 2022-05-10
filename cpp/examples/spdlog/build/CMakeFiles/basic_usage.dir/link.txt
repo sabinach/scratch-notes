@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/basic_usage.dir/src/basic_usage.cpp.o -o basic_usage  -Wl,-rpath,/usr/local/lib /usr/local/lib/libspdlog.1.9.2.dylib /usr/local/lib/libfmt.8.1.1.dylib 
