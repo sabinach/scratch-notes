@@ -3,7 +3,7 @@
 Miscellaneous code and notes taken when I am learning how to use new libraries. Saved here for future reference.
 
 ### Overview
-- Assembly [TODO]
+- Assembly
 - Bash
 - C++
 - Cron Jobs
@@ -17,7 +17,7 @@ Miscellaneous code and notes taken when I am learning how to use new libraries. 
 - Julia
 - Lua
 - Google Sheets
-- PHP [TODO]
+- PHP
 - Processing
 - Python
 - React
