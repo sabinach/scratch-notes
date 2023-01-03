@@ -1,0 +1,26 @@
+{
+  "name": "meteor-postgre-auth",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer",
+    
+    "migrate:up": "npx sequelize-cli db:migrate",
+    "migrate:drop": "npx sequelize-cli db:migrate:undo:all",
+    "test": "source .env-test && npm run migrate:test:drop && npm run migrate:test:up && TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha -p 3062"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.17.9",
+    "meteor-node-stubs": "^1.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.jsx",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  }
+}

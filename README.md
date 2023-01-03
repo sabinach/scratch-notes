@@ -3,7 +3,6 @@
 Miscellaneous code and notes taken when I am learning how to use new libraries. Saved here for future reference.
 
 ### Overview
-- Assembly
 - Bash
 - C++
 - Cron Jobs
@@ -11,17 +10,17 @@ Miscellaneous code and notes taken when I am learning how to use new libraries. 
 - Databases
    * Firebase
    * MySQL
+   * PostgreSQL
 - Discord
 - Docker
 - Jekyll
 - Julia
 - Lua
 - Google Sheets
-- PHP
+- Meteor / MongoDB
 - Processing
 - Python
 - React
-- Regex
 - SHTML
 - Vue
 - Web Scraping
