@@ -2,6 +2,7 @@
 
 import sys
 from random import choice
+
 from PyQt5.QtWidgets import (
     QApplication, 
     QMainWindow, 

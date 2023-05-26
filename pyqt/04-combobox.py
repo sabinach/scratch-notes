@@ -6,7 +6,6 @@ from PyQt5.QtWidgets import (
     QApplication,
     QComboBox
 )
-from PyQt5.QtCore import Qt
 
 class MainWindow(QMainWindow):
 

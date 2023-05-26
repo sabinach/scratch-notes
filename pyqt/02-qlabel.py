@@ -1,12 +1,12 @@
 # From: https://www.pythonguis.com/tutorials/pyqt-basic-widgets/
 
 import sys
+from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import (
     QMainWindow, 
     QApplication, 
     QLabel
 )
-from PyQt5.QtCore import Qt
 
 class MainWindow(QMainWindow):
 
