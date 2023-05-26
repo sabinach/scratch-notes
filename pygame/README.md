@@ -1,4 +1,4 @@
 # PyGame
 
-# To Run:
-'''python filename.py'''
+# To Run
+```python filename.py```
