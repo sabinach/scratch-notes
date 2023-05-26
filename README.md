@@ -19,6 +19,7 @@ Miscellaneous code and notes taken when I am learning how to use new libraries. 
 - Google Sheets
 - Meteor / MongoDB
 - Processing
+- PyGame
 - PyOpenGL
 - PyQT
 - Python
