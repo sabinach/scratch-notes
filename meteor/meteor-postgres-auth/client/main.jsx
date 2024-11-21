@@ -8,8 +8,6 @@ Meteor.startup(() => {
   render(<App/>, document.getElementById('react-target'));
 });
 
-Meteor.connection.setUserId(userId);
-
 DDP.onReconnect(() => {
    const resumeToken = localStorage.getItem('sessionToken')
    

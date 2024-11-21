@@ -7,6 +7,7 @@
 - [First Meteor Tutorial](http://meteortips.com/first-meteor-tutorial/)
 - [Second Meteor Tutorial](http://meteortips.com/second-meteor-tutorial/)
 - [Meteor Tutorials by Matthew Platts](https://www.softcover.io/read/4e73be6d/meteor-tutorial)
+- [Meteor Accounts](https://www.tutorialspoint.com/meteor/meteor_accounts.htm)
 - [Summary](https://www.habilelabs.io/blog/meteor-js-tutorial-for-beginners)
 
 ## MongoDB Tutorials
@@ -46,7 +47,17 @@
 
 ---
 
-## Example MongoDB Commands:
+## TLDR of Below
+```
+Teams = new Mongo.Collection('teams');
+Teams.find(); // finds all your teams
+Teams.find().fetch() // finds all your teams and returns them as JSON
+Teams.insert({name: 'Team 1'}); // Inserts a team into Mongo
+Teams.update({_id: id}, {$set: {name: 'Team 2'}}); // Update a team
+Teams.remove(id); // Removes a team
+```
+
+## Example MongoDB Commands
 - `show dbs`
   ```
   admin   0.000GB
@@ -104,32 +115,32 @@
 
 - `db.users.find()`
   ```
-    { "_id" : ObjectId("63b0ec070e29f1aae9adb07e"), "name" : "John" }
-    { "_id" : ObjectId("63b0ec670e29f1aae9adb07f"), "name" : "Sally", "age" : 19, "address" : { "street" : "987 North St" }, "hobbies" : [ "Running" ] }
-    { "_id" : ObjectId("63b0ec950e29f1aae9adb080"), "name" : "Joe" }
-    { "_id" : ObjectId("63b0ec950e29f1aae9adb081"), "name" : "Jill" }
+  { "_id" : ObjectId("63b0ec070e29f1aae9adb07e"), "name" : "John" }
+  { "_id" : ObjectId("63b0ec670e29f1aae9adb07f"), "name" : "Sally", "age" : 19, "address" : { "street" : "987 North St" }, "hobbies" : [ "Running" ] }
+  { "_id" : ObjectId("63b0ec950e29f1aae9adb080"), "name" : "Joe" }
+  { "_id" : ObjectId("63b0ec950e29f1aae9adb081"), "name" : "Jill" }
   ```
 
 - `db.users.find().limit(2)`
   ```
-    { "_id" : ObjectId("63b0ec070e29f1aae9adb07e"), "name" : "John" }
-    { "_id" : ObjectId("63b0ec670e29f1aae9adb07f"), "name" : "Sally", "age" : 19, "address" : { "street" : "987 North St" }, "hobbies" : [ "Running" ] }
+  { "_id" : ObjectId("63b0ec070e29f1aae9adb07e"), "name" : "John" }
+  { "_id" : ObjectId("63b0ec670e29f1aae9adb07f"), "name" : "Sally", "age" : 19, "address" : { "street" : "987 North St" }, "hobbies" : [ "Running" ] }
   ```
 
 - `db.users.find().sort({ name: 1 })` (ie. -1 is reverse)
   ```
-    { "_id" : ObjectId("63b0ec950e29f1aae9adb081"), "name" : "Jill" }
-    { "_id" : ObjectId("63b0ec950e29f1aae9adb080"), "name" : "Joe" }
-    { "_id" : ObjectId("63b0ec070e29f1aae9adb07e"), "name" : "John" }
-    { "_id" : ObjectId("63b0ec670e29f1aae9adb07f"), "name" : "Sally", "age" : 19, "address" : { "street" : "987 North St" }, "hobbies" : [ "Running" ] }
+  { "_id" : ObjectId("63b0ec950e29f1aae9adb081"), "name" : "Jill" }
+  { "_id" : ObjectId("63b0ec950e29f1aae9adb080"), "name" : "Joe" }
+  { "_id" : ObjectId("63b0ec070e29f1aae9adb07e"), "name" : "John" }
+  { "_id" : ObjectId("63b0ec670e29f1aae9adb07f"), "name" : "Sally", "age" : 19, "address" : { "street" : "987 North St" }, "hobbies" : [ "Running" ] }
   ```
 
 - `db.users.find().sort({ age: 1, name: -1 })`
   ```
-    { "_id" : ObjectId("63b0ec070e29f1aae9adb07e"), "name" : "John" }
-    { "_id" : ObjectId("63b0ec950e29f1aae9adb080"), "name" : "Joe" }
-    { "_id" : ObjectId("63b0ec950e29f1aae9adb081"), "name" : "Jill" }
-    { "_id" : ObjectId("63b0ec670e29f1aae9adb07f"), "name" : "Sally", "age" : 19, "address" : { "street" : "987 North St" }, "hobbies" : [ "Running" ] }
+  { "_id" : ObjectId("63b0ec070e29f1aae9adb07e"), "name" : "John" }
+  { "_id" : ObjectId("63b0ec950e29f1aae9adb080"), "name" : "Joe" }
+  { "_id" : ObjectId("63b0ec950e29f1aae9adb081"), "name" : "Jill" }
+  { "_id" : ObjectId("63b0ec670e29f1aae9adb07f"), "name" : "Sally", "age" : 19, "address" : { "street" : "987 North St" }, "hobbies" : [ "Running" ] }
   ```
 
 - ` db.users.find({ name: "Sally" }, { name: 1, age: 1, _id: 0})`
@@ -174,7 +185,7 @@
 
 - `db.users.find({age: {$not: {$lte: 20}}})`
   ```
-    { "_id" : ObjectId("63b0ec070e29f1aae9adb07e"), "name" : "John" }
-    { "_id" : ObjectId("63b0ec950e29f1aae9adb080"), "name" : "Joe" }
-    { "_id" : ObjectId("63b0ec950e29f1aae9adb081"), "name" : "Jill" }
+  { "_id" : ObjectId("63b0ec070e29f1aae9adb07e"), "name" : "John" }
+  { "_id" : ObjectId("63b0ec950e29f1aae9adb080"), "name" : "Joe" }
+  { "_id" : ObjectId("63b0ec950e29f1aae9adb081"), "name" : "Jill" }
   ```
